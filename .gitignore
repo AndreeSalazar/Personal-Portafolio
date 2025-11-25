@@ -1,0 +1,27 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Archivos de editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de Node (si se agregan más tarde)
+node_modules/
+package-lock.json
+yarn.lock
+
+# PDFs generados (opcional - puedes quitar esto si quieres versionar PDFs)
+*.pdf
+
