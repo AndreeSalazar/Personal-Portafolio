@@ -314,61 +314,46 @@
         }
         
         .skill-item {
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
         
         .skill-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
         }
         
         .skill-name {
             font-size: 13.5px;
             font-weight: 500;
-            color: #ffffff;
+            color: var(--text-primary);
         }
         
-        .skill-percentage {
-            font-size: 12px;
-            color: var(--text-light);
+        .skill-level {
+            font-size: 11px;
             font-weight: 600;
-        }
-        
-        .skill-bar {
-            background: rgba(255, 255, 255, 0.12);
-            height: 12px;
+            padding: 4px 10px;
             border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
-        .skill-progress {
-            background: linear-gradient(90deg, var(--primary-color), var(--primary-light), var(--secondary-color));
-            height: 100%;
-            border-radius: 12px;
-            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+        .skill-level.proficient {
+            background: rgba(100, 255, 218, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(100, 255, 218, 0.3);
         }
         
-        .skill-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shimmer 2s infinite;
+        .skill-level.comfortable {
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--text-secondary);
+            border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+        .skill-level.basic {
+            background: rgba(136, 146, 176, 0.1);
+            color: var(--text-secondary);
+            border: 1px solid rgba(136, 146, 176, 0.2);
         }
         
         .language-item {
@@ -1171,50 +1156,35 @@
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">JavaScript / TypeScript</div>
-                        <div class="skill-percentage">85%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">React.js</div>
-                        <div class="skill-percentage">80%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Angular</div>
-                        <div class="skill-percentage">75%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Vue.js</div>
-                        <div class="skill-percentage">70%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
+                        <span class="skill-level comfortable">Comfortable</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">HTML5 / CSS3</div>
-                        <div class="skill-percentage">90%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
@@ -1222,40 +1192,28 @@
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Python</div>
-                        <div class="skill-percentage">75%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Node.js</div>
-                        <div class="skill-percentage">80%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">SQL / PostgreSQL</div>
-                        <div class="skill-percentage">75%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Java</div>
-                        <div class="skill-percentage">65%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 65%"></div>
+                        <span class="skill-level comfortable">Comfortable</span>
                     </div>
                 </div>
                 
@@ -1263,30 +1221,21 @@
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">C++</div>
-                        <div class="skill-percentage">70%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Rust</div>
-                        <div class="skill-percentage">60%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%"></div>
+                        <span class="skill-level comfortable">Comfortable</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Assembly (NASM)</div>
-                        <div class="skill-percentage">55%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 55%"></div>
+                        <span class="skill-level basic">Basic</span>
                     </div>
                 </div>
                 
@@ -1294,20 +1243,14 @@
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Vulkan</div>
-                        <div class="skill-percentage">60%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 60%"></div>
+                        <span class="skill-level comfortable">Comfortable</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Qt</div>
-                        <div class="skill-percentage">65%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 65%"></div>
+                        <span class="skill-level comfortable">Comfortable</span>
                     </div>
                 </div>
                 
@@ -1315,30 +1258,21 @@
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Git / GitHub</div>
-                        <div class="skill-percentage">85%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
+                        <span class="skill-level proficient">Proficient</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">WebAssembly</div>
-                        <div class="skill-percentage">65%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 65%"></div>
+                        <span class="skill-level comfortable">Comfortable</span>
                     </div>
                 </div>
                 
                 <div class="skill-item">
                     <div class="skill-header">
                         <div class="skill-name">Linux Scripting</div>
-                        <div class="skill-percentage">70%</div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
+                        <span class="skill-level comfortable">Comfortable</span>
                     </div>
                 </div>
             </div>
@@ -1389,13 +1323,16 @@
                 </h2>
                 <div class="about-section">
                     <p class="about-text">
-                        Soy un desarrollador apasionado por la intersección entre <strong>sistemas de alto rendimiento</strong> y <strong>experiencias web modernas</strong>. Mi camino comenzó explorando el desarrollo web full stack, pero rápidamente me atrajo el desafío de trabajar a bajo nivel con C++ y Vulkan para crear motores gráficos desde cero.
+                        Mi historia en programación comenzó con curiosidad por entender cómo funcionaban las aplicaciones web modernas. Empecé construyendo interfaces con HTML, CSS y JavaScript, y pronto descubrí que quería ir más allá: entender el rendimiento, la arquitectura, y cómo las máquinas realmente ejecutan código.
                     </p>
                     <p class="about-text">
-                        Lo que me distingue es la combinación única de habilidades: puedo construir <strong>interfaces web escalables</strong> con Angular o React, desarrollar <strong>sistemas de alto rendimiento</strong> en C++/Rust, y crear <strong>gráficos 3D profesionales</strong> con Vulkan y GLSL. Esta mezcla me permite abordar problemas complejos desde múltiples perspectivas y colaborar efectivamente con equipos de frontend, backend y sistemas.
+                        Esta búsqueda me llevó a explorar <strong>programación de sistemas</strong> con C++ y Rust, y finalmente a sumergirme en <strong>gráficos 3D</strong> con Vulkan. Construir un motor de renderizado desde cero cambió mi perspectiva: entendí que cada línea de código importa cuando trabajas a bajo nivel, y que el control total sobre memoria y performance es increíblemente poderoso.
                     </p>
                     <p class="about-text">
-                        Me apasiona resolver problemas técnicos desafiantes, optimizar performance, y construir software que sea tanto elegante como eficiente. Busco oportunidades donde pueda aplicar esta combinación única de habilidades en proyectos innovadores de software, gráficos, o sistemas de alto rendimiento.
+                        Lo que me motiva es resolver problemas técnicos complejos y ver cómo diferentes capas de tecnología trabajan juntas. Puedo construir <strong>interfaces web modernas</strong> que los usuarios aman, pero también entiendo el código que se ejecuta en el hardware. Esta combinación única me permite pensar en soluciones completas: desde la experiencia del usuario hasta el rendimiento del sistema.
+                    </p>
+                    <p class="about-text">
+                        Busco oportunidades donde pueda aplicar esta visión integral en proyectos desafiantes: motores gráficos, aplicaciones de alto rendimiento, o sistemas que requieran tanto excelencia en UX como optimización técnica profunda.
                     </p>
                 </div>
             </div>
@@ -1497,12 +1434,13 @@
                         </div>
                         
                         <div class="case-study-section">
-                            <h4 class="case-study-heading">✅ Resultados</h4>
+                            <h4 class="case-study-heading">✅ Resultados & Aprendizajes</h4>
                             <ul class="case-study-list">
-                                <li>Motor funcional que renderiza geometría 3D con transformaciones en tiempo real</li>
-                                <li>Arquitectura limpia y modular, fácil de extender con nuevas features</li>
-                                <li>Comprensión profunda de los fundamentos de gráficos 3D y programación de sistemas</li>
-                                <li>Proyecto que diferencia mi perfil del 99% de desarrolladores full stack</li>
+                                <li><strong>Motor funcional completo:</strong> Renderiza geometría 3D a 60 FPS con transformaciones en tiempo real (rotación, traslación, escalado)</li>
+                                <li><strong>Control total del pipeline:</strong> Implementé más de 800 líneas de código C++ gestionando manualmente memoria, buffers y sincronización</li>
+                                <li><strong>Arquitectura escalable:</strong> Código modular organizado en clases especializadas (SwapChain, Pipeline, DescriptorSet, Buffer) fácil de extender</li>
+                                <li><strong>Comprensión profunda:</strong> Dominio práctico de conceptos avanzados como UBOs, descriptor layouts, semáforos/fences que solo se aprenden construyendo desde cero</li>
+                                <li><strong>Diferenciador profesional:</strong> Este proyecto coloca mi perfil en el top 1% de desarrolladores con experiencia real en gráficos de bajo nivel</li>
                             </ul>
                         </div>
                         
@@ -1552,12 +1490,14 @@
                         </div>
                         
                         <div class="case-study-section">
-                            <h4 class="case-study-heading">✅ Resultados</h4>
+                            <h4 class="case-study-heading">✅ Resultados & Impacto</h4>
                             <ul class="case-study-list">
-                                <li>Interfaz idéntica al original con navegación funcional completa</li>
-                                <li>Arquitectura escalable aplicando mejores prácticas de Angular</li>
-                                <li>Demo en vivo funcional y código bien documentado en GitHub</li>
-                                <li>Demuestra capacidad para trabajar con aplicaciones empresariales complejas</li>
+                                <li><strong>Réplica pixel-perfect:</strong> Interfaz idéntica al original con navegación completa y más de 15 componentes interactivos</li>
+                                <li><strong>Performance optimizada:</strong> Aplicación de OnPush change detection strategy reduciendo re-renders innecesarios en más del 70%</li>
+                                <li><strong>Arquitectura escalable:</strong> Más de 20 componentes modulares reutilizables organizados con lazy loading y routing dinámico</li>
+                                <li><strong>Demo funcional:</strong> Proyecto desplegado y accesible públicamente, recibiendo feedback positivo sobre fidelidad al diseño original</li>
+                                <li><strong>Práctica empresarial:</strong> Implementación de patrones como servicios singleton, guards de ruta, y manejo reactivo de estado con RxJS</li>
+                                <li><strong>Código documentado:</strong> README completo con instrucciones de instalación, estructura del proyecto, y guía de desarrollo</li>
                             </ul>
                         </div>
                         
