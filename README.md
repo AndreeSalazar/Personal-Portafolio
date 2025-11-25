@@ -40,8 +40,6 @@ CV profesional interactivo y responsive desarrollado con HTML5, CSS3 y JavaScrip
 - Linux Scripting
 - Git / GitHub
 
-## 📱 Ver en Vivo
-
 ## 📄 Generar PDF
 
 Para generar un PDF del CV, puedes usar la función "Imprimir" de tu navegador y guardar como PDF, o usar herramientas como Playwright/Puppeteer.
