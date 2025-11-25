@@ -636,7 +636,161 @@
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 30px;
+        }
+        
+        /* RESPONSIVE ADJUSTMENTS FOR VALUE PROPOSITION */
+        @media (max-width: 1400px) {
+            .value-proposition {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        /* ABOUT SECTION */
+        .about-section {
+            margin-top: 10px;
+        }
+        
+        .about-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        
+        .about-text strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .about-text:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* VALUE PROPOSITION */
+        .value-proposition {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 10px;
+        }
+        
+        .value-item {
+            padding: 25px;
+            background: var(--dark-bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .value-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .value-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        
+        .value-description {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        
+        /* CASE STUDY STYLES */
+        .case-study {
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: var(--dark-bg-light);
+            position: relative;
+        }
+        
+        .case-study.featured-project {
+            border: 1px solid var(--accent);
+            background: rgba(100, 255, 218, 0.05);
+        }
+        
+        .case-study:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .case-study-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .case-study.featured-project .case-study-title {
+            border-bottom-color: var(--accent);
+        }
+        
+        .case-study-section {
+            margin-bottom: 25px;
+        }
+        
+        .case-study-section:last-of-type {
+            margin-bottom: 20px;
+        }
+        
+        .case-study-heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .case-study-section p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        .case-study-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+        
+        .case-study-list li {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        
+        .case-study-list li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .case-study-list li:last-child {
+            margin-bottom: 0;
         }
         
         .project-card {
@@ -660,7 +814,11 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 12px;
         }
         
         .project-card::before {
@@ -734,22 +892,36 @@
         .project-links {
             display: flex;
             gap: 15px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
         }
         
         .project-link {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            font-size: 13px;
+            gap: 8px;
+            font-size: 14px;
             color: var(--accent);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s;
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: rgba(100, 255, 218, 0.05);
         }
         
         .project-link:hover {
             color: var(--text-primary);
-            gap: 8px;
+            border-color: var(--accent);
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateX(3px);
+        }
+        
+        .project-link svg {
+            width: 16px;
+            height: 16px;
         }
         
         .project-card:hover {
@@ -913,6 +1085,9 @@
             .item-header {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+            .value-proposition {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -1210,9 +1385,40 @@
             <div class="main-section">
                 <h2 class="main-section-title">
                     <span class="section-icon">👨‍💻</span>
-                    Perfil Profesional
+                    Sobre Mí
                 </h2>
-                <p class="profile-text">
+                <div class="about-section">
+                    <p class="about-text">
+                        Soy un desarrollador apasionado por la intersección entre <strong>sistemas de alto rendimiento</strong> y <strong>experiencias web modernas</strong>. Mi camino comenzó explorando el desarrollo web full stack, pero rápidamente me atrajo el desafío de trabajar a bajo nivel con C++ y Vulkan para crear motores gráficos desde cero.
+                    </p>
+                    <p class="about-text">
+                        Lo que me distingue es la combinación única de habilidades: puedo construir <strong>interfaces web escalables</strong> con Angular o React, desarrollar <strong>sistemas de alto rendimiento</strong> en C++/Rust, y crear <strong>gráficos 3D profesionales</strong> con Vulkan y GLSL. Esta mezcla me permite abordar problemas complejos desde múltiples perspectivas y colaborar efectivamente con equipos de frontend, backend y sistemas.
+                    </p>
+                    <p class="about-text">
+                        Me apasiona resolver problemas técnicos desafiantes, optimizar performance, y construir software que sea tanto elegante como eficiente. Busco oportunidades donde pueda aplicar esta combinación única de habilidades en proyectos innovadores de software, gráficos, o sistemas de alto rendimiento.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <h2 class="main-section-title">
+                    <span class="section-icon">🎯</span>
+                    Propuesta de Valor Única
+                </h2>
+                <div class="value-proposition">
+                    <div class="value-item">
+                        <h3 class="value-title">🔧 Systems Programming</h3>
+                        <p class="value-description">Desarrollo de motores gráficos y sistemas de bajo nivel con C++, Rust, Vulkan. Control total sobre memoria, performance y pipelines de rendering.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3 class="value-title">🎨 Graphics & Rendering</h3>
+                        <p class="value-description">Especialización en gráficos 3D, shaders GLSL, y APIs modernas como Vulkan. Construcción de motores desde cero con arquitectura profesional.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3 class="value-title">🌐 Full Stack Web</h3>
+                        <p class="value-description">Experiencia completa en desarrollo web moderno: Angular, React, Vue, Node.js, Python. Aplicaciones escalables con arquitectura limpia.</p>
+                    </div>
+                </div>
             </div>
             
             <div class="main-section">
@@ -1265,47 +1471,123 @@
                 </h2>
                 
                 <div class="projects-grid">
-                    <!-- PROYECTO DESTACADO: MOTOR VULKAN -->
-                    <div class="project-card featured-project">
+                    <!-- CASE STUDY 1: MOTOR VULKAN -->
+                    <article class="case-study featured-project">
                         <div class="featured-badge">⭐ Featured Project</div>
-                        <h3 class="project-title">🏆 Minimalist Render Engine</h3>
-                        <p class="project-description">
-                            High-performance 3D render engine built from scratch with C++ and Vulkan API. Implemented complete graphics pipeline including swapchain, render passes, vertex/index buffers, uniform buffer objects, descriptor sets, and semaphore/fence synchronization. Renders animated 3D colored cube demonstrating expertise in systems programming and low-level graphics. This project showcases elite-level technologies that differentiate advanced systems developers.
-                        </p>
+                        <h3 class="case-study-title">🏆 Minimalist Render Engine</h3>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">📋 El Problema</h4>
+                            <p>Comprender la complejidad de los motores gráficos modernos requiere experiencia práctica con APIs de bajo nivel como Vulkan. Necesitaba un proyecto que demostrara dominio real en programación de sistemas y gráficos 3D, no solo conocimiento teórico.</p>
+                        </div>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">💡 La Solución</h4>
+                            <p>Construí un motor de renderizado completo desde cero con C++ y Vulkan API, implementando cada componente del pipeline gráfico: swapchain management, render passes, vertex/index buffers, uniform buffer objects (UBOs), descriptor sets para uniforms, y sincronización con semáforos y fences. El motor renderiza un cubo 3D animado con rotación, demostrando control total sobre el flujo de rendering.</p>
+                        </div>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">🎯 Desafíos Técnicos</h4>
+                            <ul class="case-study-list">
+                                <li>Gestión manual de memoria y sincronización en Vulkan (sin abstracciones automáticas)</li>
+                                <li>Configuración correcta de descriptor sets y layouts para uniforms</li>
+                                <li>Manejo de extensiones de dispositivo y validación de capabilities</li>
+                                <li>Optimización del pipeline para evitar stalls y maximizar throughput</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">✅ Resultados</h4>
+                            <ul class="case-study-list">
+                                <li>Motor funcional que renderiza geometría 3D con transformaciones en tiempo real</li>
+                                <li>Arquitectura limpia y modular, fácil de extender con nuevas features</li>
+                                <li>Comprensión profunda de los fundamentos de gráficos 3D y programación de sistemas</li>
+                                <li>Proyecto que diferencia mi perfil del 99% de desarrolladores full stack</li>
+                            </ul>
+                        </div>
+                        
                         <div class="project-tech-list">
                             <strong>Tech Stack:</strong>
                             <ul>
-                                <li>C++</li>
+                                <li>C++17</li>
                                 <li>Vulkan API</li>
-                                <li>GLM</li>
-                                <li>GLSL</li>
+                                <li>GLM (Math Library)</li>
+                                <li>GLSL Shaders</li>
                                 <li>CMake</li>
                             </ul>
                         </div>
+                        
                         <div class="project-links">
-                            <a href="https://github.com/QdantexD/Motor-de-Render-Minimalista.git" target="_blank" class="project-link">GitHub →</a>
+                            <a href="https://github.com/QdantexD/Motor-de-Render-Minimalista.git" target="_blank" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Ver Código
+                            </a>
                         </div>
-                    </div>
+                    </article>
                     
-                    <div class="project-card">
-                        <h3 class="project-title">⚔️ Battle.net Clone</h3>
-                        <p class="project-description">
-                            Professional Battle.net interface replica built with Angular. Demonstrates advanced reactive components, injectable services, dynamic routing, and RxJS state management. Precise implementation of original design with smooth animations, complex navigation, and scalable architecture.
-                        </p>
+                    <!-- CASE STUDY 2: BATTLE.NET CLONE -->
+                    <article class="case-study">
+                        <h3 class="case-study-title">⚔️ Battle.net Clone</h3>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">📋 El Problema</h4>
+                            <p>Demostrar habilidades avanzadas en Angular y diseño de interfaces complejas. Replicar una interfaz profesional como Battle.net requiere dominio de componentes reactivos, manejo de estado, routing dinámico, y atención al detalle en UI/UX.</p>
+                        </div>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">💡 La Solución</h4>
+                            <p>Desarrollé una réplica pixel-perfect de la interfaz de Battle.net usando Angular y TypeScript. Implementé arquitectura basada en componentes modulares, servicios inyectables para gestión de estado, routing dinámico con guards, y RxJS para manejo reactivo de datos. La UI replica fielmente el diseño original con animaciones suaves, navegación compleja, y componentes interactivos.</p>
+                        </div>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">🎯 Desafíos Técnicos</h4>
+                            <ul class="case-study-list">
+                                <li>Reverse engineering del diseño original para replicar cada detalle</li>
+                                <li>Gestión de estado compleja con RxJS y servicios compartidos</li>
+                                <li>Routing dinámico con guards y resolución de datos</li>
+                                <li>Optimización de performance con OnPush change detection strategy</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="case-study-section">
+                            <h4 class="case-study-heading">✅ Resultados</h4>
+                            <ul class="case-study-list">
+                                <li>Interfaz idéntica al original con navegación funcional completa</li>
+                                <li>Arquitectura escalable aplicando mejores prácticas de Angular</li>
+                                <li>Demo en vivo funcional y código bien documentado en GitHub</li>
+                                <li>Demuestra capacidad para trabajar con aplicaciones empresariales complejas</li>
+                            </ul>
+                        </div>
+                        
                         <div class="project-tech-list">
                             <strong>Tech Stack:</strong>
                             <ul>
                                 <li>Angular</li>
                                 <li>TypeScript</li>
                                 <li>RxJS</li>
-                                <li>CSS3</li>
+                                <li>CSS3 / Animations</li>
                             </ul>
                         </div>
+                        
                         <div class="project-links">
-                            <a href="https://qdantexd.github.io/Angular-2/" target="_blank" class="project-link">Demo →</a>
-                            <a href="https://github.com/QdantexD/Angular-2" target="_blank" class="project-link">GitHub →</a>
+                            <a href="https://qdantexd.github.io/Angular-2/" target="_blank" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                                </svg>
+                                Ver Demo
+                            </a>
+                            <a href="https://github.com/QdantexD/Angular-2" target="_blank" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Ver Código
+                            </a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
             
