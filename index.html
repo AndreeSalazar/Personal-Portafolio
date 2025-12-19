@@ -3,1945 +3,1152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CV Profesional de Eddi Andreé Salazar Matos - Full Stack Developer & Systems Engineer especializado en desarrollo web moderno y programación de sistemas de alto rendimiento.">
-    <meta name="keywords" content="Full Stack Developer, Systems Engineer, JavaScript, TypeScript, Angular, React, Vue, Python, Node.js, C++, Rust, Vulkan, Qt">
+    <meta name="description" content="CV Profesional de Eddi Andreé Salazar Matos - Graphics & Systems Programmer. Especializado en C++, Vulkan, Rust y Arquitectura de Alto Rendimiento.">
+    <meta name="keywords" content="Eddi Salazar, Graphics Programmer, Systems Engineer, C++, Vulkan, Rust, WebAssembly, React, High Performance Computing">
     <meta name="author" content="Eddi Andreé Salazar Matos">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CV - Eddi Andreé Salazar Matos | Full Stack Developer & Systems Engineer">
-    <meta property="og:description" content="CV Profesional de Eddi Andreé Salazar Matos - Full Stack Developer & Systems Engineer">
+    <meta property="og:title" content="Eddi Salazar | Graphics & Systems Programmer">
+    <meta property="og:description" content="Ingeniería de software de alto rendimiento. Motores gráficos, compiladores y sistemas distribuidos.">
     <meta property="og:image" content="1.png">
     
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="CV - Eddi Andreé Salazar Matos | Full Stack Developer & Systems Engineer">
-    <meta property="twitter:description" content="CV Profesional de Eddi Andreé Salazar Matos - Full Stack Developer & Systems Engineer">
+    <title>Eddi Salazar | Graphics & Systems Programmer</title>
     
-    <title>CV - Eddi Andreé Salazar Matos | Full Stack Developer & Systems Engineer</title>
+    <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            /* Ultra Premium Dark Palette - "Obsidian & Neon" */
+            --bg-core: #050505; /* Casi negro puro */
+            --bg-surface: #0a0a0a;
+            --bg-glass: rgba(20, 20, 20, 0.6);
+            
+            --accent-primary: #38bdf8; /* Sky Blue - Intel/Tech vibes */
+            --accent-secondary: #818cf8; /* Indigo - Depth */
+            --accent-purple: #c084fc;
+            
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-tertiary: #52525b;
+            
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(56, 189, 248, 0.3);
+            
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.5);
+            --shadow-lg: 0 20px 40px -10px rgba(0,0,0,0.7);
+            --shadow-glow: 0 0 30px rgba(56, 189, 248, 0.15);
+            
+            --font-sans: 'Manrope', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        :root {
-            --dark-bg: #0a192f;
-            --dark-bg-light: #112240;
-            --text-primary: #ccd6f6;
-            --text-secondary: #8892b0;
-            --accent: #64ffda;
-            --accent-dark: #52e3c2;
-            --primary-color: #64ffda;
-            --border-color: #233554;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-        }
-        
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--dark-bg);
-            padding: 0;
-            margin: 0;
+            background-color: var(--bg-core);
+            font-family: var(--font-sans);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: var(--text-primary);
+            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(192, 132, 252, 0.08), transparent 25%);
+            background-attachment: fixed;
         }
-        
-        .cv-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: var(--dark-bg);
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            min-height: 100vh;
-            border-left: 1px solid var(--border-color);
+
+        /* Scrollbar Premium */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        
-        /* SIDEBAR IZQUIERDO */
-        .sidebar {
-            background: var(--dark-bg);
-            color: var(--text-primary);
-            padding: 40px 30px;
-            position: relative;
-            border-right: 1px solid var(--border-color);
+        ::-webkit-scrollbar-track {
+            background: var(--bg-core);
         }
-        
-        .sidebar::before {
-            content: '';
-            position: absolute;
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Noise Texture Overlay */
+        .noise-overlay {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
-            background-size: 200% 100%;
-            animation: gradient-shift 3s ease infinite;
-        }
-        
-        @keyframes gradient-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .sidebar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 1px;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Layout Grid */
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 40px;
+            position: relative;
+        }
+
+        /* Sidebar Glass Card */
+        .sidebar {
+            position: sticky;
+            top: 40px;
+            height: calc(100vh - 80px);
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 24px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            transition: var(--transition-smooth);
+            z-index: 10;
         }
         
-        .profile-section {
+        .sidebar::-webkit-scrollbar { width: 0; } /* Hide sidebar scrollbar */
+
+        .profile-header {
             text-align: center;
             margin-bottom: 40px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .profile-img {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            margin: 0 auto 28px;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 0 30px rgba(37, 99, 235, 0.3);
+
+        .avatar-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 24px;
             position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-purple));
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
         }
-        
-        .profile-img:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
-            border-color: rgba(255, 255, 255, 0.35);
-        }
-        
-        .profile-img img {
+
+        .avatar-container img {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
-            object-position: center 38%;
-            border-radius: 50%;
-            display: block;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
-            position: relative;
-            z-index: 2;
-            background: transparent;
-            filter: brightness(1.02) contrast(1.05);
+            border: 4px solid var(--bg-core);
+            background: #111;
         }
-        
-        .profile-img:hover img {
-            transform: scale(1.05);
-            filter: brightness(1.08) contrast(1.1);
-        }
-        
-        .profile-img .initials {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Poppins', sans-serif;
-            font-size: 64px;
-            font-weight: 700;
-            color: var(--white);
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-        
-        .profile-img img + .initials {
-            display: none;
-        }
-        
-        .profile-img::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-            animation: shine 4s infinite;
-            z-index: 3;
-            pointer-events: none;
-            opacity: 0.6;
-        }
-        
-        .profile-img::after {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            z-index: 1;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        
-        .profile-img:hover::after {
-            opacity: 1;
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        
-        .profile-section h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            line-height: 1.3;
-            color: var(--text-primary);
-            letter-spacing: -0.3px;
-        }
-        
-        .profile-section .title {
-            color: var(--accent);
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-        
-        .profile-section .subtitle {
-            color: var(--text-secondary);
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 1.6;
-            margin-top: 8px;
-        }
-        
-        .profile-section .age {
-            color: var(--text-secondary);
-            font-size: 13px;
-            font-weight: 400;
-            margin-top: 5px;
-        }
-        
-        .section {
-            margin-bottom: 35px;
-        }
-        
-        .section:last-child {
-            margin-bottom: 0;
-        }
-        
-        .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 18px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            position: relative;
-        }
-        
-        .section-title::before {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 50px;
-            height: 1px;
-            background: var(--accent);
-        }
-        
-        .section-title svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-        
-        .contact-item {
-            margin-bottom: 18px;
-            display: flex;
-            align-items: flex-start;
-            font-size: 13.5px;
-            gap: 12px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 4px 0;
-            border-radius: 4px;
-        }
-        
-        .contact-item:hover {
-            transform: translateX(5px);
-            background: rgba(255, 255, 255, 0.05);
-            padding-left: 8px;
-        }
-        
-        .contact-icon {
-            color: var(--accent);
-            min-width: 18px;
-            flex-shrink: 0;
-            margin-top: 2px;
-            font-size: 14px;
-        }
-        
-        .contact-item a, .contact-item span {
-            color: var(--text-secondary);
-            text-decoration: none;
-            word-break: break-word;
-            line-height: 1.5;
-            font-size: 13px;
-            transition: color 0.3s;
-        }
-        
-        .contact-item a:hover {
-            color: var(--accent);
-        }
-        
-        /* Botón Descargar CV */
-        .download-cv-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            padding: 12px 20px;
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid var(--accent);
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .download-cv-btn:hover {
-            background: var(--accent);
-            color: var(--dark-bg);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(100, 255, 218, 0.3);
-        }
-        
-        .download-cv-btn svg {
-            width: 18px;
-            height: 18px;
-        }
-        
-        .skill-item {
-            margin-bottom: 14px;
-        }
-        
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .skill-name {
-            font-size: 13.5px;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-        
-        .skill-level {
-            font-size: 11px;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .skill-level.proficient {
-            background: rgba(100, 255, 218, 0.15);
-            color: var(--accent);
-            border: 1px solid rgba(100, 255, 218, 0.3);
-        }
-        
-        .skill-level.comfortable {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--text-secondary);
-            border: 1px solid rgba(100, 255, 218, 0.2);
-        }
-        
-        .skill-level.basic {
-            background: rgba(136, 146, 176, 0.1);
-            color: var(--text-secondary);
-            border: 1px solid rgba(136, 146, 176, 0.2);
-        }
-        
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            font-size: 13.5px;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .language-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        
-        .language-name {
-            color: #ffffff;
-            font-weight: 500;
-        }
-        
-        .language-level {
-            color: var(--primary-light);
-            font-weight: 600;
-            font-size: 12px;
-            background: rgba(37, 99, 235, 0.25);
-            padding: 5px 12px;
-            border-radius: 14px;
-            border: 1px solid rgba(37, 99, 235, 0.3);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .interests-list {
-            font-size: 13.5px;
-            line-height: 2;
-            color: #ffffff;
-        }
-        
-        .interests-list p {
+
+        .profile-name {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
             margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        
-        /* CONTENIDO PRINCIPAL */
-        .main-content {
-            padding: 50px 60px;
-            background: var(--dark-bg);
-            position: relative;
-        }
-        
-        .main-section {
-            margin-bottom: 32px;
-        }
-        
-        .main-section:last-child {
-            margin-bottom: 0;
-        }
-        
-        .main-section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px;
-            color: var(--text-primary);
-            margin-bottom: 22px;
-            padding-bottom: 12px;
-            border-bottom: 3px solid var(--primary-color);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            position: relative;
-            letter-spacing: -0.3px;
-        }
-        
-        .main-section-title::before {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 60px;
-            height: 1px;
-            background: var(--accent);
-        }
-        
-        .section-icon {
-            color: var(--accent);
-            font-size: 20px;
-        }
-        
-        .profile-text {
-            color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.8;
-            text-align: justify;
-            background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary-color);
-            box-shadow: var(--shadow-sm);
-            position: relative;
-        }
-        
-        .profile-text::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            border-radius: 12px 12px 0 0;
-        }
-        
-        .experience-item, .education-item {
-            margin-bottom: 30px;
-            position: relative;
-            padding-left: 30px;
-            padding-bottom: 25px;
-        }
-        
-        .experience-item:last-child, .education-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .experience-item::before, .education-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 14px;
-            height: 14px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            box-shadow: 0 0 0 3px var(--primary-color), 0 0 0 5px var(--bg-light);
-            z-index: 2;
-        }
-        
-        .experience-item::after, .education-item::after {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 22px;
-            bottom: -5px;
-            width: 2px;
-            background: linear-gradient(180deg, var(--primary-color), transparent);
-        }
-        
-        .experience-item:last-child::after, .education-item:last-child::after {
-            display: none;
-        }
-        
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .item-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-            line-height: 1.4;
-        }
-        
-        .item-period {
-            font-size: 12px;
-            color: var(--white);
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 7px 16px;
-            border-radius: 22px;
-            font-weight: 600;
-            white-space: nowrap;
-            box-shadow: var(--shadow-sm), 0 0 10px rgba(37, 99, 235, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .item-company {
-            font-size: 14px;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .item-company::before {
-            content: '→';
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        
-        .item-description {
-            font-size: 14px;
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-weight: 400;
-        }
-        
-        .item-description ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        
-        .item-description li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 8px;
-        }
-        
-        .item-description li::marker {
-            color: var(--primary-color);
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        
-        .tech-badge {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--white);
-            padding: 9px 18px;
-            border-radius: 22px;
-            font-size: 13px;
-            font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tech-badge::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .tech-badge:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: var(--shadow-md), 0 0 15px rgba(37, 99, 235, 0.3);
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-        }
-        
-        .tech-badge:hover::before {
-            left: 100%;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-        
-        /* RESPONSIVE ADJUSTMENTS FOR VALUE PROPOSITION */
-        @media (max-width: 1400px) {
-            .value-proposition {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
-        
-        /* ABOUT SECTION */
-        .about-section {
-            margin-top: 10px;
-        }
-        
-        .about-text {
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin-bottom: 18px;
-            text-align: justify;
-        }
-        
-        .about-text strong {
-            color: var(--accent);
-            font-weight: 600;
-        }
-        
-        .about-text:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* VALUE PROPOSITION */
-        .value-proposition {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 10px;
-        }
-        
-        .value-item {
-            padding: 25px;
-            background: var(--dark-bg-light);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .value-item:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .value-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-        }
-        
-        .value-description {
-            font-size: 14px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-        }
-        
-        /* CASE STUDY STYLES */
-        .case-study {
-            border: 1px solid var(--border-color);
-            padding: 30px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            background: var(--dark-bg-light);
-            position: relative;
-        }
-        
-        .case-study.featured-project {
-            border: 1px solid var(--accent);
-            background: rgba(100, 255, 218, 0.05);
-        }
-        
-        .case-study:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .case-study-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--border-color);
-        }
-        
-        .case-study.featured-project .case-study-title {
-            border-bottom-color: var(--accent);
-        }
-        
-        .case-study-section {
-            margin-bottom: 25px;
-        }
-        
-        .case-study-section:last-of-type {
-            margin-bottom: 20px;
-        }
-        
-        .case-study-heading {
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .case-study-section p {
-            font-size: 14px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            margin: 0;
-        }
-        
-        .case-study-list {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0 0;
-        }
-        
-        .case-study-list li {
-            font-size: 14px;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 8px;
-        }
-        
-        .case-study-list li:before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-        
-        .case-study-list li:last-child {
-            margin-bottom: 0;
-        }
-        
-        .project-card {
-            border: 1px solid var(--border-color);
-            padding: 25px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            background: var(--dark-bg-light);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-card.featured-project {
-            border: 1px solid var(--accent);
-            background: rgba(100, 255, 218, 0.05);
-        }
-        
-        .featured-badge {
-            color: var(--accent);
-            font-size: 11px;
-            font-weight: 600;
+
+        .profile-role {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent-primary);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 8px 16px;
+            border-radius: 100px;
             display: inline-block;
-            padding: 4px 12px;
-            background: rgba(100, 255, 218, 0.1);
-            border-radius: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
-        
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
-            transform: scaleY(0);
-            transition: transform 0.3s;
+
+        .sidebar-section {
+            margin-bottom: 35px;
         }
-        
-        .project-card:hover {
-            border-color: var(--primary-color);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-3px);
-        }
-        
-        .project-card:hover::before {
-            transform: scaleY(1);
-        }
-        
-        .project-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 15px;
-        }
-        
-        .project-description {
-            font-size: 14px;
+
+        .sidebar-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
-        .project-tech-list {
-            margin-bottom: 15px;
+        .sidebar-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-subtle);
         }
-        
-        .project-tech-list strong {
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 10px 14px;
+            margin: 4px -14px;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+            font-size: 0.95rem;
+        }
+
+        .contact-link:hover {
+            background: rgba(255, 255, 255, 0.05);
             color: var(--text-primary);
-            font-size: 13px;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 8px;
+            transform: translateX(4px);
         }
-        
-        .project-tech-list ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+
+        .contact-icon {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+
+        /* Tech Tags */
+        .tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
-        
-        .project-tech-list li {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--accent);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid rgba(100, 255, 218, 0.2);
+
+        .tech-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition-smooth);
         }
-        
-        .project-links {
+
+        .tech-tag:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        /* Main Content */
+        .main-content {
             display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
+            flex-direction: column;
+            gap: 60px;
+            padding-bottom: 60px;
+        }
+
+        /* Hero Text */
+        .hero-section {
+            padding: 20px 0;
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        .hero-eyebrow {
+            color: var(--accent-primary);
+            font-family: var(--font-mono);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            background: linear-gradient(180deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            line-height: 1.7;
         }
         
-        .project-link {
+        .hero-text strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Cards & Projects */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 24px;
+        }
+
+        /* Premium Card */
+        .glass-card {
+            background: linear-gradient(145deg, rgba(20, 20, 20, 0.6) 0%, rgba(20, 20, 20, 0.4) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 32px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            group: no-name;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-glow);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 100px;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            padding-right: 80px; /* Space for badge */
+        }
+        .card-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .card-title a:hover {
+            text-decoration: underline;
+        }
+
+        .card-desc {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            min-height: 80px;
+        }
+
+        .card-stats {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .stat-icon { color: var(--accent-primary); }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .card-stack {
+            display: flex;
+            gap: 6px;
+        }
+
+        .stack-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .btn-premium {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            font-size: 14px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding: 8px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            background: rgba(100, 255, 218, 0.05);
-        }
-        
-        .project-link:hover {
+            background: rgba(255, 255, 255, 0.05);
             color: var(--text-primary);
-            border-color: var(--accent);
-            background: rgba(100, 255, 218, 0.1);
-            transform: translateX(3px);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-premium:hover {
+            background: var(--text-primary);
+            color: #000;
+            border-color: var(--text-primary);
+        }
+
+        /* Tech Stack Visualizer */
+        .tech-pyramid-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .tech-level {
+            display: flex;
+            align-items: center;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            transition: var(--transition-smooth);
+        }
+
+        .tech-level:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: var(--border-subtle);
+        }
+
+        .level-indicator {
+            width: 4px;
+            height: 40px;
+            border-radius: 4px;
+            margin-right: 24px;
+        }
+
+        .level-info h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .level-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
         }
         
-        .project-link svg {
-            width: 16px;
-            height: 16px;
+        .level-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        
-        .project-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        .project-card.featured-project:hover {
-            border-color: var(--accent);
-            background: rgba(100, 255, 218, 0.08);
+
+        /* Language Switcher Floating */
+        .lang-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            padding: 6px;
+            border-radius: 100px;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 100;
         }
-        
-        .competencies-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+
+        .lang-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 100px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s;
         }
-        
-        .competency-item {
+
+        .lang-btn.active {
+            background: var(--text-primary);
+            color: #000;
+        }
+
+        /* Lang Toast */
+        .lang-toast {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--accent-primary);
+            border-radius: 16px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 20px rgba(56, 189, 248, 0.2);
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transform: translateX(120%);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .lang-toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-header {
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 14px;
+        }
+
+        .toast-flag {
+            font-size: 24px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+
+        .toast-title {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .toast-text {
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            padding: 10px 12px;
-            border-radius: 8px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid transparent;
+            line-height: 1.5;
         }
-        
-        .competency-item:hover {
-            background: var(--bg-light);
-            transform: translateX(6px);
-            border-color: var(--border-color);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .competency-item::before {
-            content: '✓';
-            color: var(--success);
-            font-weight: bold;
-            font-size: 18px;
-            text-shadow: 0 1px 2px rgba(16, 185, 129, 0.3);
-        }
-        
-        /* OPTIMIZACIONES PARA PDF/IMPRESIÓN */
-        @media print {
-            * {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            
-            body {
-                background: white;
-                padding: 0;
-                margin: 0;
-            }
-            
-            .cv-container {
-                box-shadow: none;
-                max-width: 100%;
-                border-radius: 0;
-                page-break-inside: avoid;
-                min-height: auto;
-            }
-            
-            .sidebar {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-            
-            .sidebar::before {
-                display: none;
-            }
-            
-            .main-content {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-            
-            .main-section {
-                page-break-inside: avoid;
-                break-inside: avoid;
-                margin-bottom: 25px;
-            }
-            
-            .experience-item, .education-item {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-            
-            .project-card {
-                page-break-inside: avoid;
-                break-inside: avoid;
-                border: 2px solid var(--border-color);
-            }
-            
-            .project-card:hover {
-                transform: none;
-                box-shadow: none;
-            }
-            
-            .profile-img:hover {
-                transform: none;
-            }
-            
-            .tech-badge:hover {
-                transform: none;
-            }
-            
-            /* Asegurar que las fuentes se rendericen correctamente */
-            @page {
-                size: A4;
-                margin: 0;
-            }
-            
-            /* Mejorar contraste y legibilidad */
-            .profile-text {
-                color: #333;
-            }
-            
-            .item-description {
-                color: #444;
-            }
-            
-            /* Optimizar imágenes */
-            img {
-                max-width: 100%;
-                height: auto;
-                image-rendering: -webkit-optimize-contrast;
-                image-rendering: crisp-edges;
-            }
-            
-            /* Asegurar que los gradientes se impriman */
-            .sidebar {
-                background: linear-gradient(180deg, var(--dark-bg) 0%, var(--dark-bg-light) 100%) !important;
-            }
-            
-            .tech-badge {
-                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 20px 10px;
-            }
-            .cv-container {
-                grid-template-columns: 1fr;
-                border-radius: 8px;
-            }
-            .sidebar {
-                padding: 35px 25px;
-            }
-            .main-content {
-                padding: 35px 25px;
-            }
-            .competencies-grid {
-                grid-template-columns: 1fr;
-            }
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .value-proposition {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* ANIMACIONES */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .main-section {
-            animation: fadeInUp 0.6s ease-out;
-        }
-        
-        /* Language Switcher */
-        .language-switcher {
-            position: fixed;
-            top: 20px;
-            right: 20px;
+
+        .toast-actions {
             display: flex;
             gap: 10px;
-            z-index: 1000;
+            margin-top: 5px;
         }
-        
-        .lang-btn {
-            padding: 10px 20px;
-            border: 2px solid;
-            border-radius: 6px;
-            font-size: 14px;
+
+        .btn-toast-primary {
+            flex: 1;
+            background: var(--accent-primary);
+            color: #000;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-toast-secondary {
+            flex: 1;
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-subtle);
+            padding: 10px;
+            border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            transition: 0.2s;
         }
-        
-        .lang-btn.es {
-            background: rgba(220, 53, 69, 0.1);
-            border-color: #dc3545;
-            color: #dc3545;
+
+        .btn-toast-secondary:hover {
+            background: rgba(255,255,255,0.05);
+            color: #fff;
         }
-        
-        .lang-btn.es:hover,
-        .lang-btn.es.active {
-            background: #dc3545;
-            color: white;
-            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
-        }
-        
-        .lang-btn.en {
-            background: rgba(37, 99, 235, 0.1);
-            border-color: #2563eb;
-            color: #2563eb;
-        }
-        
-        .lang-btn.en:hover,
-        .lang-btn.en.active {
-            background: #2563eb;
-            color: white;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+
+        /* Print Styles - CV Generation */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                background-image: none !important;
+                color: #111111 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            /* Hide UI Elements */
+            .noise-overlay, 
+            .lang-float, 
+            .lang-toast, 
+            .sidebar-title::after,
+            .hero-eyebrow,
+            .level-indicator {
+                display: none !important;
+            }
+
+            .app-container {
+                display: block;
+                max-width: 100%;
+                padding: 0 40px;
+                margin: 0;
+            }
+
+            /* Header Reorganization for Print */
+            .sidebar {
+                position: static;
+                height: auto;
+                background: none !important;
+                backdrop-filter: none !important;
+                border: none;
+                padding: 0;
+                margin-bottom: 30px;
+                display: block;
+                overflow: visible;
+            }
+
+            .profile-header {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                text-align: left;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #000;
+            }
+
+            .avatar-container {
+                margin: 0;
+                width: 120px;
+                height: 120px;
+                box-shadow: none !important;
+                background: none !important;
+                padding: 0;
+            }
+
+            .avatar-container img {
+                border: none;
+                background: none;
+            }
+
+            .profile-info-print {
+                flex: 1;
+            }
+
+            .profile-name {
+                background: none !important;
+                -webkit-text-fill-color: #000 !important;
+                color: #000 !important;
+                font-size: 2.8rem;
+                margin: 0;
+                line-height: 1.2;
+            }
+
+            .profile-role {
+                background: #eee !important;
+                color: #000 !important;
+                border: none;
+                margin-top: 10px;
+                font-weight: 700;
+            }
+
+            /* Contact Grid */
+            .sidebar-section nav {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .contact-link {
+                color: #000 !important;
+                padding: 0;
+                margin: 0;
+                font-size: 0.9rem;
+            }
+            
+            .contact-icon {
+                color: #000 !important;
+            }
+
+            /* Content Adjustments */
+            .main-content {
+                gap: 30px;
+                padding: 0;
+            }
+
+            .hero-section {
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+                background: none !important;
+                -webkit-text-fill-color: #000 !important;
+                color: #000 !important;
+                margin-bottom: 10px;
+            }
+
+            .hero-text {
+                font-size: 1rem;
+                color: #333 !important;
+            }
+            
+            .hero-text strong {
+                color: #000 !important;
+            }
+
+            /* Links visible and shareable in PDF */
+            a[href] {
+                color: #000 !important;
+                text-decoration: underline;
+            }
+            a[href]::after {
+                content: " (" attr(href) ")";
+                font-size: 0.85rem;
+                color: #555 !important;
+            }
+            /* Turn fancy buttons into plain links */
+            .btn-premium {
+                display: inline;
+                background: none !important;
+                border: none !important;
+                padding: 0 !important;
+                color: #000 !important;
+                text-decoration: underline !important;
+            }
+
+            /* Projects & Cards */
+            .card-grid {
+                display: block;
+            }
+
+            .glass-card {
+                background: #fff !important;
+                border: 1px solid #ddd;
+                box-shadow: none !important;
+                backdrop-filter: none !important;
+                margin-bottom: 20px;
+                padding: 20px;
+                break-inside: avoid;
+                transform: none !important;
+            }
+            
+            .glass-card::before { display: none; }
+
+            .card-title {
+                color: #000 !important;
+                font-size: 1.2rem;
+            }
+
+            .card-desc {
+                color: #444 !important;
+                min-height: auto;
+                margin-bottom: 15px;
+            }
+
+            .project-badge {
+                border: 1px solid #000;
+                color: #000 !important;
+                background: none !important;
+                box-shadow: none !important;
+            }
+
+            .card-stats {
+                background: #f5f5f5 !important;
+                border: none;
+                padding: 10px;
+            }
+            
+            .stat-item {
+                color: #000 !important;
+            }
+
+            /* Tech Stack */
+            .tech-pyramid-container {
+                gap: 10px;
+            }
+
+            .tech-level {
+                background: #fff !important;
+                border: 1px solid #ddd;
+                padding: 15px;
+                break-inside: avoid;
+            }
+
+            .level-info h4 {
+                color: #000 !important;
+            }
+
+            .tech-tag {
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                border: 1px solid #ccc;
+            }
+
+            .section-heading {
+                color: #000 !important;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+            
+            .section-heading svg {
+                color: #000 !important;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button class="lang-btn es active" onclick="changeLanguage('es')">Español</button>
-        <button class="lang-btn en" onclick="changeLanguage('en')">English</button>
+    <div class="noise-overlay"></div>
+
+    <div class="lang-float">
+        <button class="lang-btn active" onclick="changeLanguage('es')">ES</button>
+        <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
     </div>
-    
-    <div class="cv-container">
-        <!-- SIDEBAR IZQUIERDO -->
-        <div class="sidebar">
-            <div class="profile-section">
-                <div class="profile-img">
-                    <img src="1.png" alt="Eddi Andreé Salazar Matos - Full Stack Developer & Systems Engineer" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="initials">EA</div>
-                </div>
-                <h1>Eddi Andreé<br>Salazar Matos</h1>
-                <p class="title">Graphics & Systems Programmer</p>
-                <p class="subtitle">Building high-performance 3D engines and distributed systems.<br>C++ • Vulkan • Rust • GLSL</p>
-                <p class="age" data-lang-es="25 años" data-lang-en="25 years old">25 años</p>
+
+    <div id="langToast" class="lang-toast">
+        <div class="toast-header">
+            <span class="toast-flag">🇺🇸</span>
+            <div>
+                <div class="toast-title">Do you speak English?</div>
             </div>
-            
-            <div class="section">
-                <h3 class="section-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <span data-lang-es="Contacto" data-lang-en="Contact">Contacto</span>
-                </h3>
-                <div class="contact-item">
-                    <span class="contact-icon">✉</span>
-                    <a href="mailto:eddi.salazar.dev@gmail.com">eddi.salazar.dev@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📱</span>
-                    <span>+51 945 375 729</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">📍</span>
-                    <span data-lang-es="Lima, Perú - importante para trabajos remotos" data-lang-en="Lima, Peru - available for remote work">Lima, Perú - importante para trabajos remotos</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">💼</span>
-                    <a href="https://www.linkedin.com/in/andreé-salazar-0b1b81304" target="_blank">LinkedIn</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🐙</span>
-                    <a href="https://github.com/QdantexD" target="_blank">github.com/QdantexD</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🌐</span>
-                    <a href="https://qdantexd.github.io/Web-Portfolio-Personal-1/" target="_blank">Portfolio Web</a>
-                </div>
-                
-                <!-- Botón Descargar CV -->
-                <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid var(--border-color);">
-                    <a href="cv.pdf" download="CV_Eddi_Salazar.pdf" class="download-cv-btn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        <span data-lang-es="Descargar CV (PDF)" data-lang-en="Download CV (PDF)">Descargar CV (PDF)</span>
+        </div>
+        <div class="toast-text">
+            It looks like you might prefer the English version of this portfolio.
+        </div>
+        <div class="toast-actions">
+            <button onclick="changeLanguage('en'); dismissToast()" class="btn-toast-primary">Switch to English</button>
+            <button onclick="dismissToast()" class="btn-toast-secondary">No, gracias</button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <a href="https://github.com/AndreeSalazar" target="_blank" rel="noopener">
+                        <img src="1.png" alt="Eddi Salazar" onerror="this.src='https://ui-avatars.com/api/?name=Eddi+Salazar&background=0D8ABC&color=fff&size=200'">
                     </a>
                 </div>
+                <h1 class="profile-name">Eddi Salazar</h1>
+                <div class="profile-role">Systems Engineer</div>
             </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Contacto</div>
+                <nav>
+                    <a href="mailto:eddi.salazar.dev@gmail.com" class="contact-link">
+                        <span class="contact-icon">✉</span> eddi.salazar.dev@gmail.com
+                    </a>
+                    <a href="https://github.com/AndreeSalazar" target="_blank" class="contact-link">
+                        <span class="contact-icon">🐙</span> github.com/AndreeSalazar
+                    </a>
+                    <a href="https://linkedin.com/in/andreé-salazar-0b1b81304" target="_blank" class="contact-link">
+                        <span class="contact-icon">💼</span> LinkedIn
+                    </a>
+                    <a href="#" class="contact-link">
+                        <span class="contact-icon">📍</span> Lima, Perú
+                    </a>
+                </nav>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Proyectos Web</div>
+                <nav>
+                    <a href="https://reactor-web-kappa.vercel.app/" target="_blank" class="contact-link">
+                        <span class="contact-icon">🚀</span> Stack-GPU-OP (Reactor)
+                    </a>
+                    <a href="https://adead.vercel.app/" target="_blank" class="contact-link">
+                        <span class="contact-icon">🛠️</span> ADead Compiler
+                    </a>
+                    <a href="https://personal-profesional.vercel.app/" target="_blank" class="contact-link">
+                        <span class="contact-icon">🎛️</span> Professional Node Lab
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Core Skills</div>
+                <div class="tech-tags">
+                    <span class="tech-tag">C++20</span>
+                    <span class="tech-tag">Rust</span>
+                    <span class="tech-tag">Vulkan</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">GLSL</span>
+                    <span class="tech-tag">WASM</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section" style="margin-top: auto;">
+                <button onclick="window.print()" class="btn-premium" style="width: 100%; justify-content: center; background: rgba(56, 189, 248, 0.1); color: var(--accent-primary); border-color: var(--accent-primary); cursor: pointer;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span data-lang-es="Exportar CV (PDF)" data-lang-en="Export CV (PDF)">Exportar CV (PDF)</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
             
-            <div class="section">
-                <h3 class="section-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                        <path d="M2 17l10 5 10-5"></path>
-                        <path d="M2 12l10 5 10-5"></path>
-                    </svg>
-                    <span data-lang-es="Habilidades Técnicas" data-lang-en="Technical Skills">Habilidades Técnicas</span>
-                </h3>
-                
-                <!-- Frontend -->
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">JavaScript / TypeScript</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">React.js</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Angular</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Vue.js</div>
-                        <span class="skill-level comfortable">Comfortable</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">HTML5 / CSS3</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <!-- Backend -->
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Python</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Node.js</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">SQL / PostgreSQL</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Java</div>
-                        <span class="skill-level comfortable">Comfortable</span>
-                    </div>
-                </div>
-                
-                <!-- Sistemas -->
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">C++</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Rust</div>
-                        <span class="skill-level comfortable">Comfortable</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Assembly (NASM)</div>
-                        <span class="skill-level basic">Basic</span>
-                    </div>
-                </div>
-                
-                <!-- Visual / Motor -->
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Vulkan</div>
-                        <span class="skill-level comfortable">Comfortable</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Qt</div>
-                        <span class="skill-level comfortable">Comfortable</span>
-                    </div>
-                </div>
-                
-                <!-- Complementarias -->
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Git / GitHub</div>
-                        <span class="skill-level proficient">Proficient</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">WebAssembly</div>
-                        <span class="skill-level comfortable">Comfortable</span>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <div class="skill-name">Linux Scripting</div>
-                        <span class="skill-level comfortable">Comfortable</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h3 class="section-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="6" x2="12" y2="12"></line>
-                        <line x1="16" y1="10" x2="12" y2="12"></line>
-                    </svg>
-                    Idiomas
-                </h3>
-                <div class="language-item">
-                    <span class="language-name">Español</span>
-                    <span class="language-level" data-lang-es="Nativo" data-lang-en="Native">Nativo</span>
-                </div>
-                <div class="language-item">
-                    <span class="language-name">Inglés</span>
-                    <span class="language-level" data-lang-es="Técnico" data-lang-en="Technical">Técnico</span>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h3 class="section-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg>
-                    Intereses
-                </h3>
-                <div class="interests-list">
-                    <p data-lang-es="• Desarrollo Full Stack" data-lang-en="• Full Stack Development">• Desarrollo Full Stack</p>
-                    <p data-lang-es="• Programación de sistemas" data-lang-en="• Systems Programming">• Programación de sistemas</p>
-                    <p data-lang-es="• Gráficos de alto rendimiento" data-lang-en="• High-Performance Graphics">• Gráficos de alto rendimiento</p>
-                    <p data-lang-es="• Open Source" data-lang-en="• Open Source">• Open Source</p>
-                    <p data-lang-es="• Optimización de performance" data-lang-en="• Performance Optimization">• Optimización de performance</p>
-                    <p data-lang-es="• Tecnologías emergentes" data-lang-en="• Emerging Technologies">• Tecnologías emergentes</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- CONTENIDO PRINCIPAL -->
-        <div class="main-content">
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">👨‍💻</span>
-                    <span data-lang-es="Sobre Mí" data-lang-en="About Me">Sobre Mí</span>
+            <!-- HERO SECTION -->
+            <section class="hero-section">
+                <span class="hero-eyebrow">👋 Hola, soy Eddi.</span>
+                <h2 class="hero-title" data-lang-es="Ingeniería de Sistemas<br>y Gráficos de Alto Rendimiento." data-lang-en="Systems Engineering<br>& High Performance Graphics.">
+                    Ingeniería de Sistemas<br>y Gráficos de Alto Rendimiento.
                 </h2>
-                <div class="about-section">
-                    <p class="about-text" data-lang-es="Empecé programando porque me parecía interesante cómo funcionaban las aplicaciones web. Construía cosas con HTML, CSS y JavaScript, y con el tiempo fui mejorando comprensión y rendimiento, de como se organiza el código, y cómo realmente funciona una computadora cuando ejecuta programas." data-lang-en="I started programming because I found it interesting how web applications worked. I built things with HTML, CSS and JavaScript, and over time I improved my understanding and performance of how code is organized, and how a computer actually works when running programs.">
-                        Empecé programando porque me parecía interesante cómo funcionaban las aplicaciones web. Construía cosas con HTML, CSS y JavaScript, y con el tiempo fui mejorando comprensión y rendimiento, de como se organiza el código, y cómo realmente funciona una computadora cuando ejecuta programas.
-                    </p>
-                    <p class="about-text" data-lang-es="Eso me llevó a explorar programación de sistemas con C++ y Rust, y luego gráficos 3D con Vulkan. Construir un motor de renderizado desde cero me enseñó bastante: cuando trabajas a bajo nivel, cada decisión cuenta, y tener control sobre memoria y rendimiento hace una diferencia real." data-lang-en="That led me to explore systems programming with C++ and Rust, and then 3D graphics with Vulkan. Building a render engine from scratch taught me a lot: when working at a low level, every decision matters, and having control over memory and performance makes a real difference.">
-                        Eso me llevó a explorar <strong>programación de sistemas</strong> con C++ y Rust, y luego <strong>gráficos 3D</strong> con Vulkan. Construir un motor de renderizado desde cero me enseñó bastante: cuando trabajas a bajo nivel, cada decisión cuenta, y tener control sobre memoria y rendimiento hace una diferencia real.
-                    </p>
-                    <p class="about-text" data-lang-es="Me gusta trabajar en problemas técnicos que requieren pensar en diferentes niveles de una aplicación. Puedo construir interfaces web que funcionen bien, pero también tengo experiencia trabajando más cerca del hardware. Eso me ayuda a pensar en soluciones que funcionen bien en ambos niveles." data-lang-en="I enjoy working on technical problems that require thinking at different levels of an application. I can build web interfaces that work well, but I also have experience working closer to the hardware. That helps me think about solutions that work well at both levels.">
-                        Me gusta trabajar en problemas técnicos que requieren pensar en diferentes niveles de una aplicación. Puedo construir <strong>interfaces web</strong> que funcionen bien, pero también tengo experiencia trabajando más cerca del hardware. Eso me ayuda a pensar en soluciones que funcionen bien en ambos niveles.
-                    </p>
-                    <p class="about-text" data-lang-es="Busco trabajar en proyectos interesantes donde pueda seguir aprendiendo y aportar con lo que sé: desarrollo web, sistemas, gráficos, o donde se necesite un enfoque que combine diferentes áreas." data-lang-en="I'm looking to work on interesting projects where I can keep learning and contribute with what I know: web development, systems, graphics, or wherever an approach that combines different areas is needed.">
-                        Busco trabajar en proyectos interesantes donde pueda seguir aprendiendo y aportar con lo que sé: desarrollo web, sistemas, gráficos, o donde se necesite un enfoque que combine diferentes áreas.
-                    </p>
-                    <div class="about-cta" style="margin-top: 25px; padding-top: 25px; border-top: 1px solid var(--border-color);">
-                        <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 15px;" data-lang-es="¿Interesado en colaborar o tienes un proyecto en mente?" data-lang-en="Interested in collaborating or have a project in mind?">¿Interesado en colaborar o tienes un proyecto en mente?</p>
-                        <a href="mailto:eddi.salazar.dev@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(100, 255, 218, 0.1); color: var(--accent); text-decoration: none; border: 1px solid var(--accent); border-radius: 6px; font-weight: 600; font-size: 14px; transition: all 0.3s;" onmouseover="this.style.background='var(--accent)'; this.style.color='var(--dark-bg)';" onmouseout="this.style.background='rgba(100, 255, 218, 0.1)'; this.style.color='var(--accent)';">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span data-lang-es="Contáctame" data-lang-en="Contact Me">Contáctame</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">🎯</span>
-                    <span data-lang-es="Áreas de Enfoque" data-lang-en="Focus Areas">Áreas de Enfoque</span>
-                </h2>
-                <div class="value-proposition">
-                    <div class="value-item">
-                        <h3 class="value-title">🔧 Systems Programming</h3>
-                        <p class="value-description" data-lang-es="Trabajo con C++, Rust y Vulkan para desarrollar sistemas y motores gráficos. Me interesa el control sobre memoria, rendimiento y cómo se procesan los gráficos." data-lang-en="I work with C++, Rust, and Vulkan to develop systems and graphics engines. I'm interested in control over memory, performance, and how graphics are processed.">Trabajo con C++, Rust y Vulkan para desarrollar sistemas y motores gráficos. Me interesa el control sobre memoria, rendimiento y cómo se procesan los gráficos.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3 class="value-title">🎨 Graphics & Rendering</h3>
-                        <p class="value-description" data-lang-es="Explorando gráficos 3D, shaders GLSL y APIs como Vulkan. He construido motores básicos desde cero para entender cómo funcionan internamente." data-lang-en="Exploring 3D graphics, GLSL shaders, and APIs like Vulkan. I've built basic engines from scratch to understand how they work internally.">Explorando gráficos 3D, shaders GLSL y APIs como Vulkan. He construido motores básicos desde cero para entender cómo funcionan internamente.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3 class="value-title">🌐 Full Stack Web</h3>
-                        <p class="value-description" data-lang-es="Desarrollo web con Angular, React, Vue, Node.js y Python. Construyo aplicaciones pensando en mantener el código organizado y funcional." data-lang-en="Web development with Angular, React, Vue, Node.js, and Python. I build applications thinking about keeping the code organized and functional.">Desarrollo web con Angular, React, Vue, Node.js y Python. Construyo aplicaciones pensando en mantener el código organizado y funcional.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">🎓</span>
-                    <span data-lang-es="Formación" data-lang-en="Education">Formación</span>
-                </h2>
-                
-                <div class="education-item">
-                    <div class="item-header">
-                        <h3 class="item-title" data-lang-es="Desarrollo Full Stack & Systems - Autodidacta" data-lang-en="Full Stack & Systems Development - Self-taught">Desarrollo Full Stack & Systems - Autodidacta</h3>
-                        <span class="item-period" data-lang-es="2022 - Presente" data-lang-en="2022 - Present">2022 - Presente</span>
-                    </div>
-                    <p class="item-company" data-lang-es="YouTube, Udemy & Plataformas Online" data-lang-en="YouTube, Udemy & Online Platforms">YouTube, Udemy & Plataformas Online</p>
-                    <div class="item-description" data-lang-es="Autodidacta en programación de gráficos y sistemas. Más de 1,500 horas de aprendizaje estructurado a través de proyectos reales. Enfocado en tecnologías: Vulkan, C++, Rust, GLSL. Mejora continua y dominio técnico." data-lang-en="Self-taught Graphics & Systems Programming. 1,500+ hours of structured learning through real projects. Focused on technologies: Vulkan, C++, Rust, GLSL. Continuous improvement and technical mastery.">
-                        Autodidacta en programación de gráficos y sistemas. Más de 1,500 horas de aprendizaje estructurado a través de proyectos reales. Enfocado en tecnologías: Vulkan, C++, Rust, GLSL. Mejora continua y dominio técnico.
-                    </div>
-                </div>
-                
-            </div>
-            
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">💼</span>
-                    <span data-lang-es="Experiencia Práctica" data-lang-en="Practical Experience">Experiencia Práctica</span>
-                </h2>
-                
-                <div class="experience-item">
-                    <div class="item-header">
-                        <h3 class="item-title" data-lang-es="Graphics & Systems Programmer" data-lang-en="Graphics & Systems Programmer">Graphics & Systems Programmer</h3>
-                        <span class="item-period" data-lang-es="2023 - Presente" data-lang-en="2023 - Present">2023 - Presente</span>
-                    </div>
-                    <p class="item-company" data-lang-es="Independent Projects | GitHub Portfolio" data-lang-en="Independent Projects | GitHub Portfolio">Independent Projects | GitHub Portfolio</p>
-                    <div class="item-description">
-                        <ul>
-                            <li data-lang-es="Trabajo con C++ y Rust para desarrollar sistemas que requieren control sobre memoria y rendimiento" data-lang-en="Working with C++ and Rust to develop systems that require control over memory and performance">Trabajo con C++ y Rust para desarrollar sistemas que requieren control sobre memoria y rendimiento</li>
-                            <li data-lang-es="Implementación de motores gráficos con Vulkan para aprender sobre rendering y pipelines" data-lang-en="Implementing graphics engines with Vulkan to learn about rendering and pipelines">Implementación de motores gráficos con Vulkan para aprender sobre rendering y pipelines</li>
-                            <li data-lang-es="Desarrollo de proyectos en diferentes niveles: desde interfaces web hasta código más cercano al hardware" data-lang-en="Developing projects at different levels: from web interfaces to code closer to the hardware">Desarrollo de proyectos en diferentes niveles: desde interfaces web hasta código más cercano al hardware</li>
-                            <li data-lang-es="Uso de Git/GitHub para versionado, manteniendo el código organizado y modular" data-lang-en="Using Git/GitHub for version control, keeping code organized and modular">Uso de Git/GitHub para versionado, manteniendo el código organizado y modular</li>
-                            <li data-lang-es="Práctica con debugging, profiling y técnicas para mejorar el rendimiento cuando es necesario" data-lang-en="Practicing debugging, profiling and techniques to improve performance when needed">Práctica con debugging, profiling y técnicas para mejorar el rendimiento cuando es necesario</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">🚀</span>
-                    <span data-lang-es="Proyectos Destacados" data-lang-en="Featured Projects">Proyectos Destacados</span>
-                </h2>
-                <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 25px; line-height: 1.6;" data-lang-es="Proyectos seleccionados que demuestran profundidad técnica, resolución de problemas complejos, y resultados tangibles. Cada proyecto incluye documentación completa, código abierto, y demos funcionales cuando es posible." data-lang-en="Selected projects that demonstrate technical depth, complex problem-solving, and tangible results. Each project includes complete documentation, open source code, and functional demos when possible.">
-                    Proyectos seleccionados que demuestran profundidad técnica, resolución de problemas complejos, y resultados tangibles. Cada proyecto incluye documentación completa, código abierto, y demos funcionales cuando es posible.
+                <p class="hero-text" data-lang-es="No elijo entre rendimiento y usabilidad: <strong>construyo ambos.</strong> Especializado en el desarrollo de motores gráficos (Vulkan/C++), compiladores y sistemas distribuidos, fusionando ingeniería de bajo nivel con experiencias web modernas." data-lang-en="I don't choose between performance and usability: <strong>I build both.</strong> Specialized in graphics engine development (Vulkan/C++), compilers, and distributed systems, merging low-level engineering with modern web experiences.">
+                    No elijo entre rendimiento y usabilidad: <strong>construyo ambos.</strong> Especializado en el desarrollo de motores gráficos (Vulkan/C++), compiladores y sistemas distribuidos, fusionando ingeniería de bajo nivel con experiencias web modernas.
                 </p>
-                
-                <div class="projects-grid">
-                    <!-- CASE STUDY 1: MOTOR VULKAN -->
-                    <article class="case-study featured-project">
-                        <div class="featured-badge" data-lang-es="⭐ Proyecto Destacado" data-lang-en="⭐ Featured Project">⭐ Proyecto Destacado</div>
-                        <h3 class="case-study-title" data-lang-es="🏆 Motor de Renderizado Minimalista" data-lang-en="🏆 Minimalist Render Engine">🏆 Motor de Renderizado Minimalista</h3>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="📋 El Problema" data-lang-en="📋 The Problem">📋 El Problema</h4>
-                            <p data-lang-es="Comprender la complejidad de los motores gráficos modernos requiere experiencia práctica con APIs de bajo nivel como Vulkan. Necesitaba un proyecto que demostrara dominio real en programación de sistemas y gráficos 3D, no solo conocimiento teórico." data-lang-en="Understanding the complexity of modern graphics engines requires hands-on experience with low-level APIs like Vulkan. I needed a project that demonstrated real mastery in systems programming and 3D graphics, not just theoretical knowledge.">Comprender la complejidad de los motores gráficos modernos requiere experiencia práctica con APIs de bajo nivel como Vulkan. Necesitaba un proyecto que demostrara dominio real en programación de sistemas y gráficos 3D, no solo conocimiento teórico.</p>
+            </section>
+
+            <!-- FEATURED PROJECTS -->
+            <section>
+                <div class="section-header">
+                    <h3 class="section-heading">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                        <span data-lang-es="Proyectos Selectos" data-lang-en="Selected Projects">Proyectos Selectos</span>
+                    </h3>
+                </div>
+
+                <div class="card-grid">
+                    <!-- Project 1 -->
+                    <article class="glass-card">
+                        <div class="project-badge">Flagship</div>
+                        <h4 class="card-title"><a href="https://reactor-web-kappa.vercel.app/" target="_blank" rel="noopener">Stack-GPU-OP</a></h4>
+                        <p class="card-desc" data-lang-es="Framework gráfico declarativo sobre Vulkan 1.3. Reduce el código boilerplate en un 85% manteniendo rendimiento nativo." data-lang-en="Declarative graphics framework over Vulkan 1.3. Reduces boilerplate code by 85% while maintaining native performance.">
+                            Framework gráfico declarativo sobre Vulkan 1.3. Reduce el código boilerplate en un 85% manteniendo rendimiento nativo.
+                        </p>
+                        <div class="card-stats">
+                            <div class="stat-item"><span class="stat-icon">⚡</span> 75+ FPS</div>
+                            <div class="stat-item"><span class="stat-icon">📉</span> -85% Code</div>
                         </div>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="💡 La Solución" data-lang-en="💡 The Solution">💡 La Solución</h4>
-                            <p data-lang-es="Construí un motor de renderizado completo desde cero con C++ y Vulkan API, implementando cada componente del pipeline gráfico: swapchain management, render passes, vertex/index buffers, uniform buffer objects (UBOs), descriptor sets para uniforms, y sincronización con semáforos y fences. El motor renderiza un cubo 3D animado con rotación, demostrando control total sobre el flujo de rendering." data-lang-en="I built a complete render engine from scratch with C++ and Vulkan API, implementing every component of the graphics pipeline: swapchain management, render passes, vertex/index buffers, uniform buffer objects (UBOs), descriptor sets for uniforms, and synchronization with semaphores and fences. The engine renders an animated 3D cube with rotation, demonstrating full control over the rendering flow.">Construí un motor de renderizado completo desde cero con C++ y Vulkan API, implementando cada componente del pipeline gráfico: swapchain management, render passes, vertex/index buffers, uniform buffer objects (UBOs), descriptor sets para uniforms, y sincronización con semáforos y fences. El motor renderiza un cubo 3D animado con rotación, demostrando control total sobre el flujo de rendering.</p>
-                        </div>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="🎯 Desafíos Técnicos" data-lang-en="🎯 Technical Challenges">🎯 Desafíos Técnicos</h4>
-                            <ul class="case-study-list">
-                                <li data-lang-es="Gestión manual de memoria y sincronización en Vulkan (sin abstracciones automáticas)" data-lang-en="Manual memory management and synchronization in Vulkan (without automatic abstractions)">Gestión manual de memoria y sincronización en Vulkan (sin abstracciones automáticas)</li>
-                                <li data-lang-es="Configuración correcta de descriptor sets y layouts para uniforms" data-lang-en="Correct configuration of descriptor sets and layouts for uniforms">Configuración correcta de descriptor sets y layouts para uniforms</li>
-                                <li data-lang-es="Manejo de extensiones de dispositivo y validación de capabilities" data-lang-en="Handling device extensions and validation of capabilities">Manejo de extensiones de dispositivo y validación de capabilities</li>
-                                <li data-lang-es="Optimización del pipeline para evitar stalls y maximizar throughput" data-lang-en="Pipeline optimization to avoid stalls and maximize throughput">Optimización del pipeline para evitar stalls y maximizar throughput</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="✅ Resultados & Aprendizajes" data-lang-en="✅ Results & Learnings">✅ Resultados & Aprendizajes</h4>
-                            <ul class="case-study-list">
-                                <li data-lang-es="<strong>Motor funcional completo:</strong> Renderiza geometría 3D a 60 FPS con transformaciones en tiempo real (rotación, traslación, escalado)" data-lang-en="<strong>Complete functional engine:</strong> Renders 3D geometry at 60 FPS with real-time transformations (rotation, translation, scaling)"><strong>Motor funcional completo:</strong> Renderiza geometría 3D a 60 FPS con transformaciones en tiempo real (rotación, traslación, escalado)</li>
-                                <li data-lang-es="<strong>Implementación del pipeline:</strong> Más de 800 líneas de código C++ donde gestioné manualmente memoria, buffers y sincronización" data-lang-en="<strong>Pipeline implementation:</strong> Over 800 lines of C++ code where I manually managed memory, buffers, and synchronization"><strong>Implementación del pipeline:</strong> Más de 800 líneas de código C++ donde gestioné manualmente memoria, buffers y sincronización</li>
-                                <li data-lang-es="<strong>Organización del código:</strong> Código modular organizado en clases especializadas (SwapChain, Pipeline, DescriptorSet, Buffer) que facilita agregar nuevas funcionalidades" data-lang-en="<strong>Code organization:</strong> Modular code organized in specialized classes (SwapChain, Pipeline, DescriptorSet, Buffer) that makes it easy to add new features"><strong>Organización del código:</strong> Código modular organizado en clases especializadas (SwapChain, Pipeline, DescriptorSet, Buffer) que facilita agregar nuevas funcionalidades</li>
-                                <li data-lang-es="<strong>Aprendizaje práctico:</strong> Trabajé con conceptos como UBOs, descriptor layouts, semáforos y fences, que aprendí construyendo el proyecto desde cero" data-lang-en="<strong>Practical learning:</strong> Worked with concepts like UBOs, descriptor layouts, semaphores and fences, which I learned by building the project from scratch"><strong>Aprendizaje práctico:</strong> Trabajé con conceptos como UBOs, descriptor layouts, semáforos y fences, que aprendí construyendo el proyecto desde cero</li>
-                                <li data-lang-es="<strong>Experiencia valiosa:</strong> Este proyecto me dio experiencia real trabajando con gráficos de bajo nivel, que es algo que no muchos desarrolladores tienen la oportunidad de explorar" data-lang-en="<strong>Valuable experience:</strong> This project gave me real experience working with low-level graphics, which is something not many developers have the opportunity to explore"><strong>Experiencia valiosa:</strong> Este proyecto me dio experiencia real trabajando con gráficos de bajo nivel, que es algo que no muchos desarrolladores tienen la oportunidad de explorar</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech-list">
-                            <strong>Tech Stack:</strong>
-                            <ul>
-                                <li>C++17</li>
-                                <li>Vulkan API</li>
-                                <li>GLM (Math Library)</li>
-                                <li>GLSL Shaders</li>
-                                <li>CMake</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://github.com/QdantexD/Motor-de-Render-Minimalista.git" target="_blank" class="project-link">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                <span data-lang-es="Ver Código" data-lang-en="View Code">Ver Código</span>
-                            </a>
-                            <div style="margin-top: 15px; padding: 12px; background: rgba(100, 255, 218, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
-                                <p style="font-size: 12px; color: var(--text-secondary); margin: 0;" data-lang-es="📝 <strong>Documentación completa:</strong> README detallado con instrucciones de compilación, arquitectura del proyecto, y guía de desarrollo disponible en el repositorio." data-lang-en="📝 <strong>Complete documentation:</strong> Detailed README with build instructions, project architecture, and development guide available in the repository.">
-                                    📝 <strong data-lang-es="Documentación completa:" data-lang-en="Complete documentation:">Documentación completa:</strong> <span data-lang-es="README detallado con instrucciones de compilación, arquitectura del proyecto, y guía de desarrollo disponible en el repositorio." data-lang-en="Detailed README with build instructions, project architecture, and development guide available in the repository.">README detallado con instrucciones de compilación, arquitectura del proyecto, y guía de desarrollo disponible en el repositorio.</span>
-                                </p>
+                        <div class="card-footer">
+                            <div class="tech-tags">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Vulkan</span>
                             </div>
+                            <a href="https://reactor-web-kappa.vercel.app/" target="_blank" class="btn-premium">View</a>
                         </div>
                     </article>
-                    
-                    <!-- CASE STUDY 2: BATTLE.NET CLONE -->
-                    <article class="case-study">
-                        <h3 class="case-study-title" data-lang-es="⚔️ Clon de Battle.net" data-lang-en="⚔️ Battle.net Clone">⚔️ Clon de Battle.net</h3>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="📋 El Problema" data-lang-en="📋 The Problem">📋 El Problema</h4>
-                            <p data-lang-es="Demostrar habilidades avanzadas en Angular y diseño de interfaces complejas. Replicar una interfaz profesional como Battle.net requiere dominio de componentes reactivos, manejo de estado, routing dinámico, y atención al detalle en UI/UX." data-lang-en="Demonstrating advanced skills in Angular and complex interface design. Replicating a professional interface like Battle.net requires mastery of reactive components, state management, dynamic routing, and attention to detail in UI/UX.">Demostrar habilidades avanzadas en Angular y diseño de interfaces complejas. Replicar una interfaz profesional como Battle.net requiere dominio de componentes reactivos, manejo de estado, routing dinámico, y atención al detalle en UI/UX.</p>
+
+                    <!-- Project 2 -->
+                    <article class="glass-card">
+                        <div class="project-badge">Compiler</div>
+                        <h4 class="card-title"><a href="https://adead.vercel.app/" target="_blank" rel="noopener">ADead Lang</a></h4>
+                        <p class="card-desc" data-lang-es="Lenguaje de programación compilado AOT. Arquitectura híbrida Rust/C++ sin Garbage Collector para determinismo total." data-lang-en="AOT compiled programming language. Hybrid Rust/C++ architecture without Garbage Collector for total determinism.">
+                            Lenguaje de programación compilado AOT. Arquitectura híbrida Rust/C++ sin Garbage Collector para determinismo total.
+                        </p>
+                        <div class="card-stats">
+                            <div class="stat-item"><span class="stat-icon">🔧</span> Zero GC</div>
+                            <div class="stat-item"><span class="stat-icon">⚙️</span> Native</div>
                         </div>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="💡 La Solución" data-lang-en="💡 The Solution">💡 La Solución</h4>
-                            <p data-lang-es="Desarrollé una réplica pixel-perfect de la interfaz de Battle.net usando Angular y TypeScript. Implementé arquitectura basada en componentes modulares, servicios inyectables para gestión de estado, routing dinámico con guards, y RxJS para manejo reactivo de datos. La UI replica fielmente el diseño original con animaciones suaves, navegación compleja, y componentes interactivos." data-lang-en="I developed a pixel-perfect replica of the Battle.net interface using Angular and TypeScript. I implemented an architecture based on modular components, injectable services for state management, dynamic routing with guards, and RxJS for reactive data handling. The UI faithfully replicates the original design with smooth animations, complex navigation, and interactive components.">Desarrollé una réplica pixel-perfect de la interfaz de Battle.net usando Angular y TypeScript. Implementé arquitectura basada en componentes modulares, servicios inyectables para gestión de estado, routing dinámico con guards, y RxJS para manejo reactivo de datos. La UI replica fielmente el diseño original con animaciones suaves, navegación compleja, y componentes interactivos.</p>
-                        </div>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="🎯 Desafíos Técnicos" data-lang-en="🎯 Technical Challenges">🎯 Desafíos Técnicos</h4>
-                            <ul class="case-study-list">
-                                <li data-lang-es="Reverse engineering del diseño original para replicar cada detalle" data-lang-en="Reverse engineering the original design to replicate every detail">Reverse engineering del diseño original para replicar cada detalle</li>
-                                <li data-lang-es="Gestión de estado compleja con RxJS y servicios compartidos" data-lang-en="Complex state management with RxJS and shared services">Gestión de estado compleja con RxJS y servicios compartidos</li>
-                                <li data-lang-es="Routing dinámico con guards y resolución de datos" data-lang-en="Dynamic routing with guards and data resolution">Routing dinámico con guards y resolución de datos</li>
-                                <li data-lang-es="Optimización de performance con OnPush change detection strategy" data-lang-en="Performance optimization with OnPush change detection strategy">Optimización de performance con OnPush change detection strategy</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="case-study-section">
-                            <h4 class="case-study-heading" data-lang-es="✅ Resultados & Impacto" data-lang-en="✅ Results & Impact">✅ Resultados & Impacto</h4>
-                            <ul class="case-study-list">
-                                <li data-lang-es="<strong>Réplica pixel-perfect:</strong> Interfaz idéntica al original con navegación completa y más de 15 componentes interactivos" data-lang-en="<strong>Pixel-perfect replica:</strong> Interface identical to the original with complete navigation and more than 15 interactive components"><strong>Réplica pixel-perfect:</strong> Interfaz idéntica al original con navegación completa y más de 15 componentes interactivos</li>
-                                <li data-lang-es="<strong>Performance optimizada:</strong> Aplicación de OnPush change detection strategy reduciendo re-renders innecesarios en más del 70%" data-lang-en="<strong>Optimized performance:</strong> Application of OnPush change detection strategy reducing unnecessary re-renders by more than 70%"><strong>Performance optimizada:</strong> Aplicación de OnPush change detection strategy reduciendo re-renders innecesarios en más del 70%</li>
-                                <li data-lang-es="<strong>Arquitectura escalable:</strong> Más de 20 componentes modulares reutilizables organizados con lazy loading y routing dinámico" data-lang-en="<strong>Scalable architecture:</strong> More than 20 reusable modular components organized with lazy loading and dynamic routing"><strong>Arquitectura escalable:</strong> Más de 20 componentes modulares reutilizables organizados con lazy loading y routing dinámico</li>
-                                <li data-lang-es="<strong>Demo funcional:</strong> Proyecto desplegado y accesible públicamente, recibiendo feedback positivo sobre fidelidad al diseño original" data-lang-en="<strong>Functional demo:</strong> Project deployed and publicly accessible, receiving positive feedback on fidelity to the original design"><strong>Demo funcional:</strong> Proyecto desplegado y accesible públicamente, recibiendo feedback positivo sobre fidelidad al diseño original</li>
-                                <li data-lang-es="<strong>Práctica empresarial:</strong> Implementación de patrones como servicios singleton, guards de ruta, y manejo reactivo de estado con RxJS" data-lang-en="<strong>Business practice:</strong> Implementation of patterns such as singleton services, route guards, and reactive state management with RxJS"><strong>Práctica empresarial:</strong> Implementación de patrones como servicios singleton, guards de ruta, y manejo reactivo de estado con RxJS</li>
-                                <li data-lang-es="<strong>Código documentado:</strong> README completo con instrucciones de instalación, estructura del proyecto, y guía de desarrollo" data-lang-en="<strong>Documented code:</strong> Complete README with installation instructions, project structure, and development guide"><strong>Código documentado:</strong> README completo con instrucciones de instalación, estructura del proyecto, y guía de desarrollo</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-tech-list">
-                            <strong data-lang-es="Stack Tecnológico:" data-lang-en="Tech Stack:">Stack Tecnológico:</strong>
-                            <ul>
-                                <li>Angular</li>
-                                <li>TypeScript</li>
-                                <li>RxJS</li>
-                                <li>CSS3 / Animations</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-links">
-                            <a href="https://qdantexd.github.io/Angular-2/" target="_blank" class="project-link" style="background: rgba(37, 99, 235, 0.1); border-color: #2563eb;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                                </svg>
-                                <span data-lang-es="🚀 Ver Demo en Vivo" data-lang-en="🚀 View Live Demo">🚀 Ver Demo en Vivo</span>
-                            </a>
-                            <a href="https://github.com/QdantexD/Angular-2" target="_blank" class="project-link">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                                <span data-lang-es="Ver Código" data-lang-en="View Code">Ver Código</span>
-                            </a>
-                            <div style="margin-top: 15px; padding: 12px; background: rgba(100, 255, 218, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
-                                <p style="font-size: 12px; color: var(--text-secondary); margin: 0;" data-lang-es="✅ <strong>Demo funcional:</strong> Proyecto desplegado y accesible públicamente. Código bien documentado con README completo en GitHub." data-lang-en="✅ <strong>Functional demo:</strong> Project deployed and publicly accessible. Well-documented code with complete README on GitHub.">
-                                    ✅ <strong data-lang-es="Demo funcional:" data-lang-en="Functional demo:">Demo funcional:</strong> <span data-lang-es="Proyecto desplegado y accesible públicamente. Código bien documentado con README completo en GitHub." data-lang-en="Project deployed and publicly accessible. Well-documented code with complete README on GitHub.">Proyecto desplegado y accesible públicamente. Código bien documentado con README completo en GitHub.</span>
-                                </p>
+                        <div class="card-footer">
+                            <div class="tech-tags">
+                                <span class="tech-tag">Rust</span>
+                                <span class="tech-tag">LLVM</span>
                             </div>
+                            <a href="https://adead.vercel.app/" target="_blank" class="btn-premium">View</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="glass-card">
+                        <div class="project-badge">Web Tooling</div>
+                        <h4 class="card-title"><a href="https://personal-profesional.vercel.app/" target="_blank" rel="noopener">Node Lab</a></h4>
+                        <p class="card-desc" data-lang-es="IDE visual basado en nodos para manipulación de bits y bytes en tiempo real. Experiencia de desarrollo fluida en el navegador." data-lang-en="Visual node-based IDE for real-time bit and byte manipulation. Fluid development experience in the browser.">
+                            IDE visual basado en nodos para manipulación de bits y bytes en tiempo real. Experiencia de desarrollo fluida en el navegador.
+                        </p>
+                        <div class="card-stats">
+                            <div class="stat-item"><span class="stat-icon">🎨</span> React Flow</div>
+                            <div class="stat-item"><span class="stat-icon">🚀</span> Vite</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TS</span>
+                            </div>
+                            <a href="https://personal-profesional.vercel.app/" target="_blank" class="btn-premium">View</a>
                         </div>
                     </article>
                 </div>
-            </div>
-            
-            <!-- Sección de Actividad y Repositorios -->
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">📊</span>
-                    <span data-lang-es="Actividad y Repositorios" data-lang-en="Activity & Repositories">Actividad y Repositorios</span>
-                </h2>
-                <div style="padding: 25px; background: var(--dark-bg-light); border: 1px solid var(--border-color); border-radius: 8px;">
-                    <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.7;" data-lang-es="Mantengo mis repositorios activos con commits regulares, documentación actualizada, y código bien estructurado. Todos los proyectos incluyen READMEs completos con instrucciones de instalación, arquitectura, y guías de desarrollo." data-lang-en="I keep my repositories active with regular commits, updated documentation, and well-structured code. All projects include complete READMEs with installation instructions, architecture, and development guides.">
-                        Mantengo mis repositorios activos con commits regulares, documentación actualizada, y código bien estructurado. Todos los proyectos incluyen READMEs completos con instrucciones de instalación, arquitectura, y guías de desarrollo.
-                    </p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-                        <a href="https://github.com/QdantexD" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: rgba(100, 255, 218, 0.1); color: var(--accent); text-decoration: none; border: 1px solid var(--accent); border-radius: 6px; font-weight: 500; font-size: 14px; transition: all 0.3s;" onmouseover="this.style.background='var(--accent)'; this.style.color='var(--dark-bg)';" onmouseout="this.style.background='rgba(100, 255, 218, 0.1)'; this.style.color='var(--accent)';">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            <span data-lang-es="Ver Perfil de GitHub" data-lang-en="View GitHub Profile">Ver Perfil de GitHub</span>
-                        </a>
-                        <div style="flex: 1; min-width: 200px; display: flex; gap: 20px; font-size: 13px; color: var(--text-secondary);">
-                            <div>
-                                <strong style="color: var(--accent); display: block; margin-bottom: 5px;" data-lang-es="Repositorios Públicos" data-lang-en="Public Repositories">Repositorios Públicos</strong>
-                                <span data-lang-es="Código abierto y documentado" data-lang-en="Open source and documented">Código abierto y documentado</span>
+            </section>
+
+            <!-- TECH STACK -->
+            <section>
+                <div class="section-header">
+                    <h3 class="section-heading">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        <span data-lang-es="Arquitectura Técnica" data-lang-en="Technical Architecture">Arquitectura Técnica</span>
+                    </h3>
+                </div>
+
+                <div class="tech-pyramid-container">
+                    <!-- High Level -->
+                    <div class="tech-level">
+                        <div class="level-indicator" style="background: linear-gradient(to bottom, #38bdf8, #818cf8);"></div>
+                        <div class="level-content">
+                            <div class="level-info">
+                                <h4 data-lang-es="Alto Nivel / Productividad" data-lang-en="High Level / Productivity">Alto Nivel / Productividad</h4>
+                                <p data-lang-es="Desarrollo rápido de aplicaciones y servicios web escalables." data-lang-en="Rapid development of scalable web applications and services.">Desarrollo rápido de aplicaciones y servicios web escalables.</p>
                             </div>
-                            <div>
-                                <strong style="color: var(--accent); display: block; margin-bottom: 5px;" data-lang-es="Commits Activos" data-lang-en="Active Commits">Commits Activos</strong>
-                                <span data-lang-es="Mantenimiento regular" data-lang-en="Regular maintenance">Mantenimiento regular</span>
+                            <div class="level-stack">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Systems Level -->
+                    <div class="tech-level">
+                        <div class="level-indicator" style="background: linear-gradient(to bottom, #f472b6, #c084fc);"></div>
+                        <div class="level-content">
+                            <div class="level-info">
+                                <h4 data-lang-es="Nivel de Sistemas / Performance" data-lang-en="Systems Level / Performance">Nivel de Sistemas / Performance</h4>
+                                <p data-lang-es="Gestión manual de memoria, concurrencia y optimización." data-lang-en="Manual memory management, concurrency, and optimization.">Gestión manual de memoria, concurrencia y optimización.</p>
+                            </div>
+                            <div class="level-stack">
+                                <span class="tech-tag" style="border-color: var(--accent-purple); color: var(--accent-purple);">C++20</span>
+                                <span class="tech-tag" style="border-color: var(--accent-purple); color: var(--accent-purple);">Rust</span>
+                                <span class="tech-tag">WebAssembly</span>
+                                <span class="tech-tag">Linux API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware Level -->
+                    <div class="tech-level">
+                        <div class="level-indicator" style="background: linear-gradient(to bottom, #fbbf24, #f59e0b);"></div>
+                        <div class="level-content">
+                            <div class="level-info">
+                                <h4 data-lang-es="Hardware / Gráficos" data-lang-en="Hardware / Graphics">Hardware / Gráficos</h4>
+                                <p data-lang-es="Control directo de GPU y CPU para máxima eficiencia." data-lang-en="Direct GPU and CPU control for maximum efficiency.">Control directo de GPU y CPU para máxima eficiencia.</p>
+                            </div>
+                            <div class="level-stack">
+                                <span class="tech-tag" style="border-color: #fbbf24; color: #fbbf24;">Vulkan 1.3</span>
+                                <span class="tech-tag">GLSL / HLSL</span>
+                                <span class="tech-tag">Assembly (NASM)</span>
+                                <span class="tech-tag">Compute Shaders</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">⚡</span>
-                    <span data-lang-es="Stack Tecnológico Completo" data-lang-en="Complete Technology Stack">Stack Tecnológico Completo</span>
-                </h2>
-                
-                <!-- PIRÁMIDE ÉPICA: ALTO NIVEL -->
-                <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05)); border-radius: 12px; border-left: 5px solid var(--primary-color);">
-                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; padding-bottom: 10px; border-bottom: 3px solid var(--primary-color); display: flex; align-items: center; gap: 10px;">
-                        <span style="font-size: 24px;">⬆️</span> <span data-lang-es="ALTO NIVEL (High Level)" data-lang-en="HIGH LEVEL">ALTO NIVEL (High Level)</span>
-                    </h3>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 15px; font-style: italic;" data-lang-es="Lenguajes y tecnologías de alto nivel para desarrollo rápido y productivo" data-lang-en="High-level languages and technologies for rapid and productive development">Lenguajes y tecnologías de alto nivel para desarrollo rápido y productivo</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge" style="background: linear-gradient(135deg, #3776ab, #ffd343); font-size: 14px; padding: 10px 20px; font-weight: 600;">Python</span>
-                        <span class="tech-badge">Java</span>
-                        <span class="tech-badge">JavaScript</span>
-                        <span class="tech-badge">TypeScript</span>
-                        <span class="tech-badge">Node.js</span>
-                        <span class="tech-badge">SQL</span>
-                        <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">MySQL</span>
-                        <span class="tech-badge">Angular</span>
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">Vue</span>
-                        <span class="tech-badge">HTML5</span>
-                        <span class="tech-badge">CSS3</span>
-                    </div>
-                </div>
-                
-                <!-- PIRÁMIDE ÉPICA: NIVEL MEDIO -->
-                <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, rgba(0, 89, 156, 0.08), rgba(30, 58, 138, 0.08)); border-radius: 12px; border-left: 5px solid #00599C;">
-                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700; color: #00599C; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 3px solid #00599C; display: flex; align-items: center; gap: 10px;">
-                        <span style="font-size: 24px;">⚙️</span> <span data-lang-es="NIVEL MEDIO (Mid Level)" data-lang-en="MID LEVEL">NIVEL MEDIO (Mid Level)</span>
-                    </h3>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 15px; font-style: italic;" data-lang-es="Lenguajes de sistemas con control de memoria y performance optimizada" data-lang-en="System languages with memory control and optimized performance">Lenguajes de sistemas con control de memoria y performance optimizada</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge" style="background: linear-gradient(135deg, #00599C, #004482); font-size: 14px; padding: 10px 20px; font-weight: 600;">C++</span>
-                        <span class="tech-badge" style="background: linear-gradient(135deg, #000000, #1C1C1E);">Rust</span>
-                        <span class="tech-badge" style="background: linear-gradient(135deg, #AC162C, #7A0F1F);">Vulkan</span>
-                        <span class="tech-badge" style="background: linear-gradient(135deg, #41CD52, #2E9B3A);">Qt</span>
-                        <span class="tech-badge">WebAssembly (WASM)</span>
-                        <span class="tech-badge">Linux Scripting</span>
-                    </div>
-                </div>
-                
-                <!-- PIRÁMIDE ÉPICA: BAJO NIVEL -->
-                <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(135deg, rgba(110, 76, 19, 0.1), rgba(139, 105, 20, 0.1)); border-radius: 12px; border-left: 5px solid #6E4C13; box-shadow: 0 4px 12px rgba(110, 76, 19, 0.2);">
-                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700; color: #6E4C13; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 3px solid #6E4C13; display: flex; align-items: center; gap: 10px;">
-                        <span style="font-size: 24px;">⬇️</span> <span data-lang-es="BAJO NIVEL (Low Level)" data-lang-en="LOW LEVEL">BAJO NIVEL (Low Level)</span>
-                    </h3>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 15px; font-style: italic;" data-lang-es="Control absoluto del hardware y máximo rendimiento" data-lang-en="Absolute hardware control and maximum performance">Control absoluto del hardware y máximo rendimiento</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge" style="background: linear-gradient(135deg, #6E4C13, #8B6914); font-size: 16px; padding: 12px 30px; font-weight: 700; box-shadow: 0 4px 12px rgba(110, 76, 19, 0.4);">Assembly (NASM)</span>
-                    </div>
-                </div>
-                
-                <!-- HERRAMIENTAS Y COMPLEMENTARIAS -->
-                <div style="margin-bottom: 25px;">
-                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--primary-color); display: flex; align-items: center; gap: 8px;">
-                        <span>🔧</span> <span data-lang-es="Herramientas y Versionado" data-lang-en="Tools & Version Control">Herramientas y Versionado</span>
-                    </h3>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Git</span>
-                        <span class="tech-badge">GitHub</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="main-section">
-                <h2 class="main-section-title">
-                    <span class="section-icon">🎯</span>
-                    <span data-lang-es="Competencias Clave" data-lang-en="Key Competencies">Competencias Clave</span>
-                </h2>
-                <div class="competencies-grid">
-                    <div class="competency-item" data-lang-es="Aprendizaje rápido y mejora continua" data-lang-en="Rapid learning and continuous improvement">Aprendizaje rápido y mejora continua</div>
-                    <div class="competency-item" data-lang-es="Resolución eficiente de problemas complejos" data-lang-en="Efficient resolution of complex problems">Resolución eficiente de problemas complejos</div>
-                    <div class="competency-item" data-lang-es="Código limpio, escalable y mantenible" data-lang-en="Clean, scalable, and maintainable code">Código limpio, escalable y mantenible</div>
-                    <div class="competency-item" data-lang-es="Trabajo autónomo y proactivo" data-lang-en="Autonomous and proactive work">Trabajo autónomo y proactivo</div>
-                    <div class="competency-item" data-lang-es="Atención meticulosa al detalle" data-lang-en="Meticulous attention to detail">Atención meticulosa al detalle</div>
-                    <div class="competency-item" data-lang-es="Pensamiento lógico y analítico" data-lang-en="Logical and analytical thinking">Pensamiento lógico y analítico</div>
-                    <div class="competency-item" data-lang-es="Gestión efectiva de tiempo y prioridades" data-lang-en="Effective time and priority management">Gestión efectiva de tiempo y prioridades</div>
-                    <div class="competency-item" data-lang-es="Alta adaptabilidad a nuevas tecnologías" data-lang-en="High adaptability to new technologies">Alta adaptabilidad a nuevas tecnologías</div>
-                    <div class="competency-item" data-lang-es="Aplicación práctica de conocimientos" data-lang-en="Practical application of knowledge">Aplicación práctica de conocimientos</div>
-                    <div class="competency-item" data-lang-es="Preparación para múltiples desafíos" data-lang-en="Preparation for multiple challenges">Preparación para múltiples desafíos</div>
-                    <div class="competency-item" data-lang-es="Capacidad de autocrítica y mejora" data-lang-en="Capacity for self-criticism and improvement">Capacidad de autocrítica y mejora</div>
-                    <div class="competency-item" data-lang-es="Orientación a resultados de calidad" data-lang-en="Orientation towards quality results">Orientación a resultados de calidad</div>
-                </div>
-            </div>
-        </div>
+            </section>
+
+        </main>
     </div>
-    
+
     <script>
-        // Translations object
-        const translations = {
+        // Translations
+        const i18n = {
             es: {
-                // Sidebar
-                'contact': 'Contacto',
-                'technical-skills': 'Habilidades Técnicas',
-                'languages': 'Idiomas',
-                'interests': 'Intereses',
-                'download-cv': 'Descargar CV (PDF)',
-                'location': 'Lima, Perú - importante para trabajos remotos',
-                'age': '25 años',
-                'native': 'Nativo',
-                'technical': 'Técnico',
-                'interests-dev': 'Desarrollo Full Stack',
-                'interests-systems': 'Programación de sistemas',
-                'interests-graphics': 'Gráficos de alto rendimiento',
-                'interests-opensource': 'Open Source',
-                'interests-optimization': 'Optimización de performance',
-                'interests-emerging': 'Tecnologías emergentes',
-                
-                // Main content
-                'about-me': 'Sobre Mí',
-                'about-text-1': 'Empecé programando porque me parecía interesante cómo funcionaban las aplicaciones web. Construía cosas con HTML, CSS y JavaScript, y con el tiempo fui queriendo entender mejor qué pasaba detrás de todo eso: el rendimiento, cómo se organiza el código, y cómo realmente funciona una computadora cuando ejecuta programas.',
-                'about-text-2': 'Eso me llevó a explorar programación de sistemas con C++ y Rust, y luego gráficos 3D con Vulkan. Construir un motor de renderizado desde cero me enseñó bastante: cuando trabajas a bajo nivel, cada decisión cuenta, y tener control sobre memoria y rendimiento hace una diferencia real.',
-                'about-text-3': 'Me gusta trabajar en problemas técnicos que requieren pensar en diferentes niveles de una aplicación. Puedo construir interfaces web que funcionen bien, pero también tengo experiencia trabajando más cerca del hardware. Eso me ayuda a pensar en soluciones que funcionen bien en ambos niveles.',
-                'about-text-4': 'Busco trabajar en proyectos interesantes donde pueda seguir aprendiendo y aportar con lo que sé: desarrollo web, sistemas, gráficos, o donde se necesite un enfoque que combine diferentes áreas.',
-                'focus-areas': 'Áreas de Enfoque',
-                'systems-programming': 'Systems Programming',
-                'systems-desc': 'Trabajo con C++, Rust y Vulkan para desarrollar sistemas y motores gráficos. Me interesa el control sobre memoria, rendimiento y cómo se procesan los gráficos.',
-                'graphics-rendering': 'Graphics & Rendering',
-                'graphics-desc': 'Explorando gráficos 3D, shaders GLSL y APIs como Vulkan. He construido motores básicos desde cero para entender cómo funcionan internamente.',
-                'fullstack-web': 'Full Stack Web',
-                'fullstack-desc': 'Desarrollo web con Angular, React, Vue, Node.js y Python. Construyo aplicaciones pensando en mantener el código organizado y funcional.',
-                'education': 'Formación',
-                'education-title': 'Desarrollo Full Stack & Systems - Autodidacta',
-                'education-company': 'YouTube, Udemy & Plataformas Online',
-                'education-desc': 'Self-taught Graphics & Systems Programming. 1,500+ hours of structured learning through real projects. Specialized in elite technologies: Vulkan, C++, Rust, GLSL. Continuous improvement and technical mastery.',
-                'experience': 'Experiencia Práctica',
-                'experience-title': 'Graphics & Systems Programmer',
-                'experience-company': 'Independent Projects | GitHub Portfolio',
-                'projects': 'Proyectos Destacados',
-                'featured-project': 'Featured Project',
-                'vulkan-title': 'Minimalist Render Engine',
-                'vulkan-problem-title': 'El Problema',
-                'vulkan-problem': 'Comprender la complejidad de los motores gráficos modernos requiere experiencia práctica con APIs de bajo nivel como Vulkan. Necesitaba un proyecto que demostrara dominio real en programación de sistemas y gráficos 3D, no solo conocimiento teórico.',
-                'vulkan-solution-title': 'La Solución',
-                'vulkan-solution': 'Construí un motor de renderizado completo desde cero con C++ y Vulkan API, implementando cada componente del pipeline gráfico: swapchain management, render passes, vertex/index buffers, uniform buffer objects (UBOs), descriptor sets para uniforms, y sincronización con semáforos y fences. El motor renderiza un cubo 3D animado con rotación, demostrando control total sobre el flujo de rendering.',
-                'vulkan-challenges-title': 'Desafíos Técnicos',
-                'vulkan-results-title': 'Resultados & Aprendizajes',
-                'vulkan-view-code': 'Ver Código',
-                'battlenet-title': 'Battle.net Clone',
-                'tech-stack': 'Stack Tecnológico Completo',
-                'high-level': 'ALTO NIVEL (High Level)',
-                'mid-level': 'NIVEL MEDIO (Mid Level)',
-                'low-level': 'BAJO NIVEL (Low Level)',
-                'tools': 'Herramientas y Versionado'
+                role: "Ingeniero de Sistemas",
+                contact: "Contacto",
+                download: "Descargar CV",
+                // Add more as needed, most are handled inline for this simplified robust version
             },
             en: {
-                // Sidebar
-                'contact': 'Contact',
-                'technical-skills': 'Technical Skills',
-                'languages': 'Languages',
-                'interests': 'Interests',
-                'download-cv': 'Download CV (PDF)',
-                'location': 'Lima, Peru - available for remote work',
-                'age': '25 years old',
-                'native': 'Native',
-                'technical': 'Technical',
-                'interests-dev': 'Full Stack Development',
-                'interests-systems': 'Systems Programming',
-                'interests-graphics': 'High-Performance Graphics',
-                'interests-opensource': 'Open Source',
-                'interests-optimization': 'Performance Optimization',
-                'interests-emerging': 'Emerging Technologies',
-                
-                // Main content
-                'about-me': 'About Me',
-                'about-text-1': 'I started programming because I found it interesting how web applications worked. I built things with HTML, CSS and JavaScript, and over time I wanted to understand better what was happening behind it all: performance, how code is organized, and how a computer actually works when running programs.',
-                'about-text-2': 'That led me to explore systems programming with C++ and Rust, and then 3D graphics with Vulkan. Building a render engine from scratch taught me a lot: when working at a low level, every decision matters, and having control over memory and performance makes a real difference.',
-                'about-text-3': 'I enjoy working on technical problems that require thinking at different levels of an application. I can build web interfaces that work well, but I also have experience working closer to the hardware. That helps me think about solutions that work well at both levels.',
-                'about-text-4': 'I\'m looking to work on interesting projects where I can keep learning and contribute with what I know: web development, systems, graphics, or wherever an approach that combines different areas is needed.',
-                'focus-areas': 'Focus Areas',
-                'systems-programming': 'Systems Programming',
-                'systems-desc': 'I work with C++, Rust, and Vulkan to develop systems and graphics engines. I\'m interested in control over memory, performance, and how graphics are processed.',
-                'graphics-rendering': 'Graphics & Rendering',
-                'graphics-desc': 'Exploring 3D graphics, GLSL shaders, and APIs like Vulkan. I\'ve built basic engines from scratch to understand how they work internally.',
-                'fullstack-web': 'Full Stack Web',
-                'fullstack-desc': 'Web development with Angular, React, Vue, Node.js, and Python. I build applications thinking about keeping the code organized and functional.',
-                'education': 'Education',
-                'education-title': 'Full Stack & Systems Development - Self-taught',
-                'education-company': 'YouTube, Udemy & Online Platforms',
-                'education-desc': 'Self-taught Graphics & Systems Programming. 1,500+ hours of structured learning through real projects. Focused on technologies: Vulkan, C++, Rust, GLSL. Continuous improvement and technical mastery.',
-                'experience': 'Practical Experience',
-                'experience-title': 'Graphics & Systems Programmer',
-                'experience-company': 'Independent Projects | GitHub Portfolio',
-                'projects': 'Featured Projects',
-                'featured-project': 'Featured Project',
-                'vulkan-title': 'Minimalist Render Engine',
-                'vulkan-problem-title': 'The Problem',
-                'vulkan-problem': 'Understanding the complexity of modern graphics engines requires hands-on experience with low-level APIs like Vulkan. I needed a project that demonstrated real mastery in systems programming and 3D graphics, not just theoretical knowledge.',
-                'vulkan-solution-title': 'The Solution',
-                'vulkan-solution': 'I built a complete render engine from scratch with C++ and Vulkan API, implementing every component of the graphics pipeline: swapchain management, render passes, vertex/index buffers, uniform buffer objects (UBOs), descriptor sets for uniforms, and synchronization with semaphores and fences. The engine renders an animated 3D cube with rotation, demonstrating full control over the rendering flow.',
-                'vulkan-challenges-title': 'Technical Challenges',
-                'vulkan-results-title': 'Results & Learnings',
-                'vulkan-view-code': 'View Code',
-                'battlenet-title': 'Battle.net Clone',
-                'tech-stack': 'Complete Technology Stack',
-                'high-level': 'HIGH LEVEL',
-                'mid-level': 'MID LEVEL',
-                'low-level': 'LOW LEVEL',
-                'tools': 'Tools & Version Control'
+                role: "Systems Engineer",
+                contact: "Contact",
+                download: "Download CV",
             }
         };
-        
-        // Language change function
+
         function changeLanguage(lang) {
             document.documentElement.lang = lang;
-            document.getElementById('html-lang').setAttribute('lang', lang);
             
-            // Update active button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
+            // Toggle Buttons
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick*="${lang}"]`).classList.add('active');
+            
+            // Simple text replacement for data-lang attributes
+            document.querySelectorAll(`[data-lang-${lang}]`).forEach(el => {
+                el.innerHTML = el.getAttribute(`data-lang-${lang}`);
             });
-            document.querySelector(`.lang-btn.${lang === 'es' ? 'es' : 'en'}`).classList.add('active');
-            
-            // Update all elements with data-lang attributes
-            document.querySelectorAll('[data-lang-es]').forEach(el => {
-                if (lang === 'es') {
-                    const content = el.getAttribute('data-lang-es');
-                    // Check if content contains HTML tags
-                    if (content && (content.includes('<strong>') || content.includes('<em>') || content.includes('<br>'))) {
-                        el.innerHTML = content;
-                    } else {
-                        el.textContent = content;
-                    }
-                } else {
-                    const content = el.getAttribute('data-lang-en');
-                    // Check if content contains HTML tags
-                    if (content && (content.includes('<strong>') || content.includes('<em>') || content.includes('<br>'))) {
-                        el.innerHTML = content;
-                    } else {
-                        el.textContent = content;
-                    }
-                }
-            });
-            
-            // Update elements by ID or class
-            Object.keys(translations[lang]).forEach(key => {
-                const elements = document.querySelectorAll(`[data-translate="${key}"]`);
-                elements.forEach(el => {
-                    if (el.tagName === 'INPUT' && el.type === 'text') {
-                        el.value = translations[lang][key];
-                    } else {
-                        el.textContent = translations[lang][key];
-                    }
-                });
-            });
-            
-            // Save preference
-            localStorage.setItem('preferred-language', lang);
         }
-        
-        // Initialize language on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('preferred-language') || 'es';
-            changeLanguage(savedLang);
+
+        // Toast Logic
+        function dismissToast() {
+            document.getElementById('langToast').classList.remove('show');
+            localStorage.setItem('lang-toast-dismissed', 'true');
+        }
+
+        // Auto-detect and show toast
+        window.addEventListener('load', () => {
+            // Check if already dismissed
+            if (localStorage.getItem('lang-toast-dismissed')) return;
+
+            // Check browser language
+            const userLang = navigator.language || navigator.userLanguage; 
+            // If English is detected (starts with 'en'), show the toast
+            if (userLang && userLang.toLowerCase().startsWith('en')) {
+                // Wait a moment for effect
+                setTimeout(() => {
+                    document.getElementById('langToast').classList.add('show');
+                }, 1500);
+            }
+        });
+
+        // Tilt Effect for Cards (Vanilla JS implementation of Tilt)
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -5; // Max rotation deg
+                const rotateY = ((x - centerX) / centerX) * 5;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                // Glow effect positioning
+                // Optional: Add a radial gradient overlay via JS if desired, but CSS hover is cleaner for performance
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+            });
         });
     </script>
 </body>
